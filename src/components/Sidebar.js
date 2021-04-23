@@ -59,19 +59,16 @@ const Sidebar = () => {
                 Dan
               </Link>
             </li>
-            {/* <li className="menu__item" role"none"><a className="menu__link" href="#" role="menuitem" tabindex="-1">Home</a></li>
-        <li className="menu__item" role"none"><a className="menu__link" href="#" role="menuitem" tabindex="-1">Blog</a></li>
-        <li className="menu__item" role"none"><a className="menu__link" href="#" role="menuitem" tabindex="-1">Portfolio</a></li>
-        <li className="menu__item" role"none"><a className="menu__link" href="#" role="menuitem" tabindex="-1">About</a></li>
-        <li className="menu__item" role"none"><a className="menu__link" href="#" role="menuitem" tabindex="-1">Contact</a></li> */}
           </ul>
         </nav>
+
         <main className="content">
+          <h1 className="logo">logo</h1>
           <ul>
             <li>person1</li>
-            <li>person1</li>
-            <li>person1</li>
-            <li>person1</li>
+            <li>person2</li>
+            <li>person3</li>
+            <li>person4</li>
           </ul>
         </main>
       </div>
