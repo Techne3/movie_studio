@@ -40,35 +40,46 @@ const Sidebar = () => {
             aria-orientation="vertical"
           >
             <li>
-              <Link to="/Dan" className="menu__link">
-                Dan
+              <Link to="/contact" className="menu__link">
+                Contact
               </Link>
             </li>
             <li>
-              <Link to="/Dan" className="menu__link">
-                Dan
+              <Link to="/about" className="menu__link">
+                About
               </Link>
             </li>
             <li>
+              <Link to="/something" className="menu__link">
+                something
+              </Link>
+            </li>
+            {/* <li>
               <Link to="/Dan" className="menu__link">
                 Dan
               </Link>
-            </li>
-            <li>
-              <Link to="/Dan" className="menu__link">
-                Dan
-              </Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
 
         <main className="content">
           <h1 className="logo">logo</h1>
           <ul>
-            <li>person1</li>
-            <li>person2</li>
-            <li>person3</li>
-            <li>person4</li>
+            <li>
+              <Link to="/dan" className="menu__link">
+                Dan
+              </Link>
+            </li>
+            <li>
+              <Link to="/dan" className="menu__link">
+                Dan
+              </Link>
+            </li>
+            <li>
+              <Link to="/dan" className="menu__link">
+                Dan
+              </Link>
+            </li>
           </ul>
         </main>
       </div>

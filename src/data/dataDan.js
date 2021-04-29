@@ -10,7 +10,7 @@ const data = {
       brand: "Nike",
       rating: 2.5,
       numReviews: 10,
-      description: "Slim shirt design",
+      description: "https://player.vimeo.com/video/341212112",
     },
     {
       _id: "2",
