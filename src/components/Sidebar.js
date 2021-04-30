@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 
 import cats from "../images/cat.jpg";
 import cats2 from "../images/cat2.jpg";
+import cats3 from "../images/cats3.jpg";
 
 const Sidebar = () => {
   const [imageChanger, setImageChanger] = useState(`${cats2}`);
@@ -11,11 +12,19 @@ const Sidebar = () => {
   function changeImage(image) {
     setImageChanger(image);
   }
+
   return (
     <>
-      <div className="wrapper">
+      <div
+        className="wrapper"
+        style={{
+          backgroundImage: `url(${imageChanger})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
         <div className="image_area">
-          <img src={imageChanger} alt="cat" id="slider" />
+          {/* <img src={imageChanger} alt="cat" id="slider" /> */}
           <input
             type="checkbox"
             id="menuToggler"
@@ -87,7 +96,11 @@ const Sidebar = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/dan" className="menu__link">
+                <Link
+                  to="/dan"
+                  className="menu__link"
+                  onMouseEnter={(e) => changeImage(`${cats3}`)}
+                >
                   Dan
                 </Link>
               </li>

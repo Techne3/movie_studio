@@ -4,11 +4,71 @@ import "../styles/danInfo.scss";
 import MenuBar from "./MenuBar";
 
 import { Card } from "semantic-ui-react";
+import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 
 const Dan = () => {
   return (
     <>
-      <MenuBar />
+      <div className="wrapper">
+        <div className="image_area">
+          <input
+            type="checkbox"
+            id="menuToggler"
+            className="input-toggler"
+            value="1"
+            autofocus="true"
+          />
+          <label
+            for="menuToggler"
+            id="menuTogglerLabel"
+            className="menu-toggler"
+            role="button"
+            aria-pressed="false"
+            aria-expanded="false"
+            aria-label="Navigation button"
+          >
+            <span className="menu-toggler__line"></span>
+            <span className="menu-toggler__line"></span>
+            <span className="menu-toggler__line"></span>
+          </label>
+          <nav
+            id="sidebar"
+            className="sidebar"
+            role="navigation"
+            aria-labelledby="menuTogglerLabel"
+            aria-hidden="true"
+          >
+            <ul
+              id="menubar"
+              className="menu"
+              role="menubar"
+              aria-orientation="vertical"
+            >
+              <li>
+                <Link to="/contact" className="menu__link">
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="menu__link">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/something" className="menu__link">
+                  something
+                </Link>
+              </li>
+              {/* <li>
+              <Link to="/Dan" className="menu__link">
+                Dan
+              </Link>
+            </li> */}
+            </ul>
+          </nav>
+        </div>
+      </div>
+      {/* <MenuBar /> */}
       <div className="dan_wrapper">
         {data.products.map((x) => (
           <>
