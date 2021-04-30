@@ -63,9 +63,12 @@ $total: 3;
 // }
 
 .wrapper {
+  // background-image: url("../images/cat.jpg");
+  // background-repeat: no-repeat;
+  // background-size: cover;
   min-width: 100vw;
   height: 100%;
-  background-color: rgb(164, 212, 226);
+  // background-color: rgb(164, 212, 226);
 }
 
 .sidebar,
@@ -100,9 +103,10 @@ $total: 3;
   margin-top: 6rem;
 }
 .logo {
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: 20px;
   left: 0;
+  margin-left: 2rem;
 }
 
 .menu {
@@ -218,4 +222,7 @@ $total: 3;
 .sb-link:focus,
 .sb-link:active {
   background: #f7f7f7;
+}
+
+.image_area {
 }
