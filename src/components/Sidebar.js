@@ -5,9 +5,11 @@ import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import cats from "../images/cat.jpg";
 import cats2 from "../images/cat2.jpg";
 import cats3 from "../images/cats3.jpg";
+import test from "../images/test.gif";
+import tests from "../images/tests.gif";
 
 const Sidebar = () => {
-  const [imageChanger, setImageChanger] = useState(`${cats2}`);
+  const [imageChanger, setImageChanger] = useState(`${tests}`);
 
   function changeImage(image) {
     setImageChanger(image);
@@ -21,6 +23,9 @@ const Sidebar = () => {
           backgroundImage: `url(${imageChanger})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
+          // backgroundAttachment: "fixed",
+          // height: "100%",
+          // width: "100%",
         }}
       >
         <div className="image_area">
