@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Contact from "./components/Contact";
 import Dan from "./components/Dan";
-// import Dans from "./components/Dans";
 import About from "./components/About";
 
 function App() {

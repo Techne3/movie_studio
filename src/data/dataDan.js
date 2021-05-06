@@ -1,10 +1,13 @@
+import catTest from "../images/cat.jpg";
+
 const data = {
   info: [
     {
       _id: "1",
-      name: "Cats",
+      name: "Catsss",
       description:
-        "https://player.vimeo.com/video/531638862?color=ec6445&title=0&byline=0&portrait=0",
+        "https://player.vimeo.com/video/531638862?color=ec6445&title=0&byline=0&portrait=0&background=0&autoplay=1",
+      image: `${catTest}`,
     },
     {
       _id: "2",
