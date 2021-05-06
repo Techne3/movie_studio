@@ -1,7 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 const HamburgerMenu = () => {
+  const pathname = window.location.pathname;
+  const path = pathname === "/" ? "home" : pathname.substr(1);
+
+  const [activeItem, setActiveItem] = useState(path);
+
   return (
     <>
       <div className="wrapper">
@@ -38,20 +43,34 @@ const HamburgerMenu = () => {
             role="menubar"
             aria-orientation="vertical"
           >
+            {activeItem === "dan" ||
+            activeItem === "david" ||
+            activeItem === "chris" ? (
+              <li>
+                <NavLink
+                  to={`${activeItem}`}
+                  className="menu__link"
+                  activeClassName="dan"
+                  activeStyle={{ color: "gold" }}
+                >
+                  {activeItem}
+                </NavLink>
+              </li>
+            ) : null}
             <li>
-              <Link to="/contact" className="menu__link">
+              <NavLink to="/contact" className="menu__link">
                 Contact
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/about" className="menu__link">
+              <NavLink to="/about" className="menu__link">
                 About
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/" className="menu__link">
+              <NavLink to="/" className="menu__link">
                 Directors
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </nav>

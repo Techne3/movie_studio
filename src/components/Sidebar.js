@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import "../styles/sidebar.scss";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Link,
+  Route,
+  NavLink,
+} from "react-router-dom";
 
 import cats from "../images/cat.jpg";
 import cats2 from "../images/cat2.jpg";
@@ -15,34 +20,28 @@ const Sidebar = () => {
     setImageChanger(image);
   }
 
+  const pathname = window.location.pathname;
+  const path = pathname === "/" ? "home" : pathname.substr(1);
+
+  const [activeItem, setActiveItem] = useState(path);
+
   return (
     <>
-      <div
-        className="wrapper"
-        // style={{
-        //   backgroundImage: `url(${imageChanger})`,
-        //   backgroundRepeat: "no-repeat",
-        //   backgroundSize: "cover",
-        //   display: "flex",
-        //   justifyContent: "center",
-        //   alignItems: "center",
-        //   height: "100vh",
-        // }}
-      >
+      <div className="wrapper">
         <div
           className="image_area"
           style={{
+            display: "flex",
             backgroundImage: `url(${imageChanger})`,
             backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
             backgroundSize: "cover",
-            display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            height: "100vh",
-            margin: "2rem",
+            height: "90vh",
+            margin: "4rem 4rem",
           }}
         >
-          {/* <img src={imageChanger} alt="cat" id="slider" /> */}
           <input
             type="checkbox"
             id="menuToggler"
@@ -87,15 +86,22 @@ const Sidebar = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/" className="menu__link">
+                <NavLink
+                  to="/"
+                  className="menu__link"
+                  activeClassName="home"
+                  activeStyle={{ color: "gold" }}
+                >
                   Directors
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </nav>
           <main className="content">
-            <div className="logo">
-              <h3>LOGO</h3>
+            <div className="logos">
+              <Link to="/" className="logos">
+                LOGO
+              </Link>
             </div>
             <ul>
               <li>
@@ -111,11 +117,11 @@ const Sidebar = () => {
               <li>
                 <Link
                   style={{ textDecoration: "none" }}
-                  to="/dan"
+                  to="/david"
                   className="menu_link"
                   onMouseEnter={(e) => changeImage(`${cats3}`)}
                 >
-                  Dan
+                  David
                 </Link>
               </li>
               <li>

@@ -1,13 +1,13 @@
-import catTest from "../images/cat.jpg";
+import cat2 from "../images/cats3.jpg";
 
-const dan = {
+const david = {
   info: [
     {
       _id: "1",
       name: "Catsss",
       description:
         "https://player.vimeo.com/video/531638862?color=ec6445&title=0&byline=0&portrait=0&background=0&autoplay=1",
-      image: `${catTest}`,
+      image: `${cat2}`,
     },
     {
       _id: "2",
@@ -42,4 +42,4 @@ const dan = {
   ],
 };
 
-export default dan;
+export default david;

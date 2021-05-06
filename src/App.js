@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 
 import Sidebar from "./components/Sidebar";
 import Contact from "./components/Contact";
-import Dan from "./components/Dan";
+import Directors from "./components/Directors";
 import About from "./components/About";
 
 function App() {
@@ -11,7 +11,8 @@ function App() {
     <Router>
       <div className="App">
         <Route exact path="/" component={Sidebar}></Route>
-        <Route path="/dan" component={Dan}></Route>
+        <Route path="/dan" component={Directors}></Route>
+        <Route path="/david" component={Directors}></Route>
         <Route path="/contact" component={Contact}></Route>
         <Route path="/about" component={About}></Route>
       </div>

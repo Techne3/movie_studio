@@ -41,7 +41,7 @@
   --toggler-offset-right: 1.5rem;
   --toggler-offset-top: 50%;
   --toggler-color: rgb(17, 16, 16);
-  --toggler-color-hover: Wheat;
+  --toggler-color-hover: Gold;
 }
 
 // same as var(--toggler-line-number)
@@ -79,8 +79,8 @@ $total: 3;
 .sidebar {
   width: 100%;
   height: 100vh;
-  transform: translateX(calc((-120%) * -1));
-  clip-path: polygon(24% 0, 100% 0%, 100% 100%, 0% 100%);
+  transform: translateX(calc((-100%) * -1));
+  clip-path: polygon(67% 0, 100% 0%, 100% 100%, 0% 100%);
   // background: linear-gradient(to bottom right, rgb(96, 122, 160), Wheat);
   // background: rgba(27, 27, 27, 1);
   background: #fff;
@@ -108,11 +108,13 @@ $total: 3;
   font-size: 2rem;
   margin-top: 4rem;
 }
-.logo {
-  position: fixed;
-  top: 20px;
+.logos {
+  position: absolute;
+  top: 14px;
   left: 0;
   margin-left: 2rem;
+  text-decoration: none;
+  color: #000;
 }
 
 .menu {
@@ -139,20 +141,21 @@ $total: 3;
   // }
 }
 .menu__link {
-  color: white;
+  color: #000;
   font-weight: 100;
   text-decoration: none;
   font-size: 2rem;
   line-height: 15vmin;
   transition: all 0.35s ease-out;
 
-  // &:hover,
-  // &:focus,
-  // &:active {
-  //   color: Gold;
-  // }
+  &:hover,
+  &:focus,
+  &:active {
+    color: Gold;
+  }
 }
 .menu_link {
+  line-height: 15vmin;
   font-size: 40px;
   text-decoration: none !important;
   text-transform: uppercase;
@@ -169,7 +172,7 @@ $total: 3;
   position: absolute;
   width: 0;
   overflow: hidden;
-  transition: 0.8s;
+  transition: 0.5s;
 }
 // .menu_link :hover {
 //   outline: 0 !important;
@@ -253,6 +256,7 @@ $total: 3;
 
   &:checked ~ .sidebar {
     transform: translateX(0);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
   }
 }
 
