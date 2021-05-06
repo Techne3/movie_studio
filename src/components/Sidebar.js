@@ -19,16 +19,29 @@ const Sidebar = () => {
     <>
       <div
         className="wrapper"
-        style={{
-          backgroundImage: `url(${imageChanger})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          // backgroundAttachment: "fixed",
-          // height: "100%",
-          // width: "100%",
-        }}
+        // style={{
+        //   backgroundImage: `url(${imageChanger})`,
+        //   backgroundRepeat: "no-repeat",
+        //   backgroundSize: "cover",
+        //   display: "flex",
+        //   justifyContent: "center",
+        //   alignItems: "center",
+        //   height: "100vh",
+        // }}
       >
-        <div className="image_area">
+        <div
+          className="image_area"
+          style={{
+            backgroundImage: `url(${imageChanger})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "100vh",
+            margin: "2rem",
+          }}
+        >
           {/* <img src={imageChanger} alt="cat" id="slider" /> */}
           <input
             type="checkbox"
@@ -74,18 +87,12 @@ const Sidebar = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/something" className="menu__link">
-                  something
+                <Link to="/" className="menu__link">
+                  Directors
                 </Link>
               </li>
-              {/* <li>
-              <Link to="/Dan" className="menu__link">
-                Dan
-              </Link>
-            </li> */}
             </ul>
           </nav>
-
           <main className="content">
             <div className="logo">
               <h3>LOGO</h3>
@@ -93,8 +100,9 @@ const Sidebar = () => {
             <ul>
               <li>
                 <Link
+                  style={{ textDecoration: "none" }}
                   to="/dan"
-                  className="menu__link"
+                  className="menu_link"
                   onMouseEnter={(e) => changeImage(`${cats}`)}
                 >
                   Dan
@@ -102,15 +110,16 @@ const Sidebar = () => {
               </li>
               <li>
                 <Link
+                  style={{ textDecoration: "none" }}
                   to="/dan"
-                  className="menu__link"
+                  className="menu_link"
                   onMouseEnter={(e) => changeImage(`${cats3}`)}
                 >
                   Dan
                 </Link>
               </li>
               <li>
-                <Link to="/dan" className="menu__link">
+                <Link to="/dan" className="menu_link">
                   Dan
                 </Link>
               </li>

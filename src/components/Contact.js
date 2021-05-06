@@ -1,10 +1,9 @@
 import React from "react";
 
-import MenuBar from "./MenuBar";
 const Contact = () => {
   return (
     <>
-      <MenuBar />
+      <h1>Hello from contact</h1>
     </>
   );
 };

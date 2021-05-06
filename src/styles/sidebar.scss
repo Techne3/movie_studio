@@ -66,9 +66,9 @@ $total: 3;
   // background-image: url("../images/cat.jpg");
   // background-repeat: no-repeat;
   // background-size: cover;
-  min-width: 100vw;
-  height: 100%;
-  // background-color: rgb(164, 212, 226);
+  // min-width: 100vw;
+  // height: 100%;
+  transition: background 0.3s;
 }
 
 .sidebar,
@@ -77,17 +77,18 @@ $total: 3;
 }
 
 .sidebar {
-  width: var(--sidebar-width);
-  transform: translateX(calc((-100%) * -1));
+  width: 100%;
+  height: 100vh;
+  transform: translateX(calc((-120%) * -1));
   clip-path: polygon(24% 0, 100% 0%, 100% 100%, 0% 100%);
   // background: linear-gradient(to bottom right, rgb(96, 122, 160), Wheat);
   background: rgba(27, 27, 27, 1);
+  // #eff1f4
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
   top: 0;
-  height: 100vh;
   z-index: 3;
 }
 
@@ -100,9 +101,11 @@ $total: 3;
   flex-direction: column;
 }
 .content ul li {
+  display: flex;
+  justify-content: flex-end;
   list-style-type: none;
   font-size: 2rem;
-  margin-top: 6rem;
+  margin-top: 4rem;
 }
 .logo {
   position: fixed;
@@ -119,15 +122,49 @@ $total: 3;
   color: white;
   font-weight: 100;
   text-decoration: none;
-  font-size: 3rem;
+  font-size: 3em;
   line-height: 15vmin;
-  transition: all 0.35s ease-out;
+  // transition: all 0.35s ease-out;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: Gold;
-  }
+  // &:hover,
+  // &:focus,
+  // &:active {
+  //   color: Gold;
+  // }
+}
+.menu_link {
+  font-size: 40px;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  letter-spacing: 0.2em;
+  color: #fff;
+  background: transparent;
+}
+.menu_link:before {
+  content: "DAN";
+  color: #000;
+  position: absolute;
+  width: 0;
+  overflow: hidden;
+  transition: 0.8s;
+}
+// .menu_link :hover {
+//   outline: 0 !important;
+// }
+// .menu_link :focus {
+//   outline: 0 !important;
+// }
+
+.menu_link:hover:before {
+  width: 100%;
 }
 
 .menu-toggler {
@@ -227,6 +264,6 @@ $total: 3;
 }
 
 .image_area {
-  width: 100%;
-  height: 100%;
+  height: 80vh;
+  transition: background 0.3s;
 }

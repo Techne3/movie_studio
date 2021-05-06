@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import data from "../data/dataDan";
 import "../styles/danInfo.scss";
-import MenuBar from "./MenuBar";
 
-import { Card } from "semantic-ui-react";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 
 const Dan = () => {
@@ -63,8 +61,8 @@ const Dan = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/something" className="menu__link">
-                  something
+                <Link to="/" className="menu__link">
+                  Directors
                 </Link>
               </li>
               {/* <li>
@@ -96,8 +94,7 @@ const Dan = () => {
         ))}
       </div>
       {videoPlayer && (
-        <div className="VideoPlayerWrapper">
-          <p>{videoPlayer}</p>
+        <div className="videoPlayerWrapper">
           <iframe
             title="casts"
             src={videoPlayer}

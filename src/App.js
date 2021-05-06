@@ -7,8 +7,6 @@ import Dan from "./components/Dan";
 // import Dans from "./components/Dans";
 import About from "./components/About";
 
-import "semantic-ui-css/semantic.min.css";
-
 function App() {
   return (
     <Router>
