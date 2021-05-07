@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../styles/danInfo.scss";
-import cats from "../images/cat.jpg";
+import "../styles/directorInfo.scss";
 
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import HamburgerMenu from "./HamburgerMenu";
@@ -9,7 +8,7 @@ import dan from "../data/dataDan";
 import david from "../data/dataDavid";
 import jon from "../data/dataJon";
 
-const Dan = () => {
+const Directors = () => {
   const [videoPlayer, setVideoPlayer] = useState(null);
 
   const changeVideo = (video) => {
@@ -18,6 +17,21 @@ const Dan = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  ///
+
+  window.onscroll = function () {
+    growShrinkLogo();
+  };
+
+  function growShrinkLogo() {
+    var Logo = document.getElementById("Logo");
+    if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+      Logo.style.fontSize = "25px";
+    } else {
+      Logo.style.fontSize = "35px";
+    }
+  }
+
   const pathname = window.location.pathname;
   const path = pathname === "/" ? "home" : pathname.substr(1);
 
@@ -25,8 +39,12 @@ const Dan = () => {
 
   return (
     <>
-      <div className="logos">
-        <Link to="/" className="logos">
+      <div className="logo_bar">
+        <div className="directors_name_container">
+          <p>Directors </p>
+          <p className="dir_name">Dan</p>
+        </div>
+        <Link to="/" className="logos" id="Logo">
           LOGO
         </Link>
       </div>
@@ -57,7 +75,7 @@ const Dan = () => {
           ></iframe>
         </div>
       )}
-      <div className="dan_wrapper">
+      <div className="director_wrapper">
         {activeItem === "dan"
           ? dan.info.map((x) => (
               <>
@@ -65,9 +83,15 @@ const Dan = () => {
                   className="post"
                   onClick={() => changeVideo(x.description)}
                 >
+                  <div className="video_name">
+                    <h2>Name of video</h2>
+                  </div>
                   <img src={x.image} alt="video" />
                   <div className="post-s">
                     <h2>{x.name}</h2>
+                    <div className="post-info">
+                      <h3>hello</h3>
+                    </div>
                   </div>
                 </div>
               </>
@@ -96,6 +120,9 @@ const Dan = () => {
                   <div className="post-s">
                     <h2>{x.name}</h2>
                   </div>
+                  <div className="post-info">
+                    <p>hello</p>
+                  </div>
                 </div>
               </>
             ))}
@@ -104,4 +131,4 @@ const Dan = () => {
   );
 };
 
-export default Dan;
+export default Directors;
