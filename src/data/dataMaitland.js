@@ -1,6 +1,6 @@
 import cat2 from "../images/cats3.jpg";
 
-const david = {
+const maitland = {
   info: [
     {
       _id: "1",
@@ -42,4 +42,4 @@ const david = {
   ],
 };
 
-export default david;
+export default maitland;

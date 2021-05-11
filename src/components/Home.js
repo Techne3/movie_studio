@@ -97,7 +97,7 @@ const Sidebar = () => {
                   activeClassName="home"
                   activeStyle={{ color: "gold" }}
                 >
-                  Directors
+                  DIRECTORS
                 </NavLink>
               </li>
             </ul>

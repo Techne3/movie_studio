@@ -44,8 +44,8 @@ const HamburgerMenu = () => {
             aria-orientation="vertical"
           >
             {activeItem === "dan" ||
-            activeItem === "david" ||
-            activeItem === "chris" ? (
+            activeItem === "sarah" ||
+            activeItem === "maitland" ? (
               <li>
                 <NavLink
                   to={`${activeItem}`}
@@ -53,7 +53,7 @@ const HamburgerMenu = () => {
                   activeClassName="dan"
                   activeStyle={{ color: "gold" }}
                 >
-                  {activeItem}
+                  {activeItem.charAt(0).toUpperCase() + activeItem.slice(1)}
                 </NavLink>
               </li>
             ) : null}
@@ -63,17 +63,17 @@ const HamburgerMenu = () => {
                 className="menu__link"
                 activeStyle={{ color: "gold" }}
               >
-                Contact
+                CONTACT
               </NavLink>
             </li>
             <li>
               <NavLink to="/about" className="menu__link">
-                About
+                ABOUT
               </NavLink>
             </li>
             <li>
               <NavLink to="/" className="menu__link">
-                Directors
+                DIRECTORS
               </NavLink>
             </li>
           </ul>

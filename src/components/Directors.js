@@ -5,16 +5,21 @@ import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import HamburgerMenu from "./HamburgerMenu";
 
 import dan from "../data/dataDan";
-import david from "../data/dataDavid";
-import jon from "../data/dataJon";
+import maitland from "../data/dataMaitland";
+import sarah from "../data/dataSarah";
 
 const Directors = () => {
   const [videoPlayer, setVideoPlayer] = useState(null);
+  const [videoCredit, setVideoCredit] = useState(null);
 
   const changeVideo = (video) => {
     setVideoPlayer(video);
 
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const changeCredits = (credits) => {
+    setVideoCredit(credits);
   };
 
   ///
@@ -42,7 +47,15 @@ const Directors = () => {
       <div className="logo_bar">
         <div className="directors_name_container">
           <p>Directors </p>
-          <p className="dir_name">Dan</p>
+
+          <p className="dir_name">
+            {" "}
+            {activeItem === "dan"
+              ? "Dan"
+              : activeItem === "maitland"
+              ? "Maitland"
+              : "Sarah"}
+          </p>
         </div>
         <Link to="/" className="logos" id="Logo">
           LOGO
@@ -73,6 +86,7 @@ const Directors = () => {
             allow="autoplay; fullscreen;"
             allowfullscreen
           ></iframe>
+          <p>{videoCredit}</p>
         </div>
       )}
       <div className="director_wrapper">
@@ -81,7 +95,10 @@ const Directors = () => {
               <>
                 <div
                   className="post"
-                  onClick={() => changeVideo(x.description)}
+                  onClick={() => {
+                    changeVideo(x.description);
+                    changeCredits(x.name);
+                  }}
                 >
                   <div className="video_name">
                     <h2>Name of video</h2>
@@ -99,8 +116,8 @@ const Directors = () => {
                 </div>
               </>
             ))
-          : activeItem === "david"
-          ? david.info.map((x) => (
+          : activeItem === "maitland"
+          ? maitland.info.map((x) => (
               <>
                 <div
                   className="post"
@@ -113,7 +130,7 @@ const Directors = () => {
                 </div>
               </>
             ))
-          : jon.info.map((x) => (
+          : sarah.info.map((x) => (
               <>
                 <div
                   className="post"

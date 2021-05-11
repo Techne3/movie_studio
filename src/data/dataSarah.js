@@ -1,6 +1,6 @@
 import catTest from "../images/cat.jpg";
 
-const jon = {
+const sarah = {
   info: [
     {
       _id: "1",
@@ -42,4 +42,4 @@ const jon = {
   ],
 };
 
-export default jon;
+export default sarah;
