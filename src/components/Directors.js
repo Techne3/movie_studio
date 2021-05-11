@@ -19,18 +19,18 @@ const Directors = () => {
 
   ///
 
-  window.onscroll = function () {
-    growShrinkLogo();
-  };
+  // window.onscroll = function () {
+  //   growShrinkLogo();
+  // };
 
-  function growShrinkLogo() {
-    var Logo = document.getElementById("Logo");
-    if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
-      Logo.style.fontSize = "25px";
-    } else {
-      Logo.style.fontSize = "35px";
-    }
-  }
+  // function growShrinkLogo() {
+  //   var Logo = document.getElementById("Logo");
+  //   if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+  //     Logo.style.fontSize = "25px";
+  //   } else {
+  //     Logo.style.fontSize = "35px";
+  //   }
+  // }
 
   const pathname = window.location.pathname;
   const path = pathname === "/" ? "home" : pathname.substr(1);
@@ -86,12 +86,15 @@ const Directors = () => {
                   <div className="video_name">
                     <h2>Name of video</h2>
                   </div>
+
                   <img src={x.image} alt="video" />
                   <div className="post-s">
-                    <h2>{x.name}</h2>
-                    <div className="post-info">
+                    <h4>hello</h4>
+                    <div className="post-info"></div>
+                    {/* <h2>{x.name}</h2> */}
+                    {/* <div className="post-info">
                       <h3>hello</h3>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </>

@@ -27,6 +27,11 @@ const Sidebar = () => {
 
   return (
     <>
+      <div className="logos_container">
+        <Link to="/" className="logos_home">
+          LOGO
+        </Link>
+      </div>
       <div className="wrapper">
         <div
           className="image_area"
@@ -38,7 +43,7 @@ const Sidebar = () => {
             backgroundSize: "cover",
             justifyContent: "center",
             alignItems: "center",
-            height: "90vh",
+            height: "80vh",
             margin: "4rem 4rem",
           }}
         >
@@ -76,12 +81,12 @@ const Sidebar = () => {
               aria-orientation="vertical"
             >
               <li>
-                <Link to="/contact" className="menu__link">
+                <Link to="/contact" className="menu__link__contact">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="menu__link">
+                <Link to="/about" className="menu__link__about">
                   About
                 </Link>
               </li>
@@ -98,35 +103,30 @@ const Sidebar = () => {
             </ul>
           </nav>
           <main className="content">
-            <div className="logos">
-              <Link to="/" className="logos">
-                LOGO
-              </Link>
-            </div>
-            <ul>
+            <ul className="content_links">
               <li>
                 <Link
                   style={{ textDecoration: "none" }}
-                  to="/dan"
-                  className="menu_link"
+                  to="/maitland"
+                  className="menu_link_dir"
                   onMouseEnter={(e) => changeImage(`${cats}`)}
                 >
-                  Dan
+                  Maitland Lottimer
                 </Link>
               </li>
               <li>
                 <Link
                   style={{ textDecoration: "none" }}
-                  to="/david"
-                  className="menu_link"
+                  to="/sarah"
+                  className="menu_link_dir"
                   onMouseEnter={(e) => changeImage(`${cats3}`)}
                 >
-                  David
+                  Sarah Megysey
                 </Link>
               </li>
               <li>
-                <Link to="/dan" className="menu_link">
-                  Dan
+                <Link to="/dan" className="menu_link_dir">
+                  Daniel Sharkey
                 </Link>
               </li>
             </ul>
