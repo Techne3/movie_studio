@@ -11,6 +11,7 @@ import sarah from "../data/dataSarah";
 const Directors = () => {
   const [videoPlayer, setVideoPlayer] = useState(null);
   const [videoCredit, setVideoCredit] = useState(null);
+  const [videoTitle, setVideoTitle] = useState(null);
 
   const changeVideo = (video) => {
     setVideoPlayer(video);
@@ -20,6 +21,10 @@ const Directors = () => {
 
   const changeCredits = (credits) => {
     setVideoCredit(credits);
+  };
+
+  const changeTitle = (title) => {
+    setVideoTitle(title);
   };
 
   ///
@@ -63,31 +68,36 @@ const Directors = () => {
       </div>
       <HamburgerMenu />
       {videoPlayer && (
-        <div
-          className="videoPlayerWrapper"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            marginTop: "4rem",
-          }}
-        >
-          <iframe
-            title="casts"
-            src={videoPlayer}
+        <>
+          <div
+            className="videoPlayerWrapper"
             style={{
-              // position: "absolute",
-              // top: "0",
-              // left: "0",
-              width: "90%",
-              height: "100%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              marginTop: "4rem",
             }}
-            frameborder="0"
-            allow="autoplay; fullscreen;"
-            allowfullscreen
-          ></iframe>
-          <p>{videoCredit}</p>
-        </div>
+          >
+            <iframe
+              title="casts"
+              src={videoPlayer}
+              style={{
+                // position: "absolute",
+                // top: "0",
+                // left: "0",
+                width: "90%",
+                height: "100%",
+              }}
+              frameborder="0"
+              allow="autoplay; fullscreen;"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div className="credit_wrapper">
+            <h3>{videoTitle}</h3>
+            <p>{videoCredit}</p>
+          </div>
+        </>
       )}
       <div className="director_wrapper">
         {activeItem === "dan"
@@ -97,16 +107,17 @@ const Directors = () => {
                   className="post"
                   onClick={() => {
                     changeVideo(x.description);
-                    changeCredits(x.name);
+                    changeCredits(x.credits);
+                    changeTitle(x.name);
                   }}
                 >
                   <div className="video_name">
-                    <h2>Name of video</h2>
+                    <h2>{x.name}</h2>
                   </div>
 
                   <img src={x.image} alt="video" />
                   <div className="post-s">
-                    <h4>hello</h4>
+                    <h4>{x.director}</h4>
                     <div className="post-info"></div>
                     {/* <h2>{x.name}</h2> */}
                     {/* <div className="post-info">
@@ -146,6 +157,21 @@ const Directors = () => {
                 </div>
               </>
             ))}
+      </div>
+
+      <div className="bio_container">
+        <h1>About</h1>
+        <div className="bio_info">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
       </div>
     </>
   );

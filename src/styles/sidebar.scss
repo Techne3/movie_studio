@@ -89,6 +89,7 @@ $total: 3;
   transition: all 0.75s ease-in-out;
   // background: linear-gradient(to bottom right, rgb(96, 122, 160), Wheat);
   // background: rgba(27, 27, 27, 1);
+  // background: #f5f5b8;
   background: #fff;
   // #eff1f4
   display: flex;
@@ -147,15 +148,15 @@ $total: 3;
   line-height: 15vmin;
   transition: all 0.35s ease-out;
   line-height: 15vmin;
+  transition: all 0.35s ease-out;
   display: flex;
-  align-content: center;
+  justify-content: center;
   align-items: center;
-  // justify-content: center;
 
   &:hover,
   &:focus,
   &:active {
-    color: Gold;
+    color: #96bfe6;
   }
 }
 .menu_link_dir {
@@ -166,7 +167,9 @@ $total: 3;
   list-style-type: none;
   text-decoration: none;
   transition: all 0.35s ease-out;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &:hover,
   &:focus,
   &:active {
@@ -187,7 +190,7 @@ $total: 3;
   // transition: all 0.35s ease-out;
   line-height: 15vmin;
   display: flex;
-  align-content: center;
+  justify-content: center;
   align-items: center;
 }
 .menu__link__about {
@@ -204,7 +207,7 @@ $total: 3;
   // transition: all 0.95s ease;
   line-height: 15vmin;
   display: flex;
-  align-content: center;
+  justify-content: center;
   align-items: center;
 }
 .menu__link__contact:before {
