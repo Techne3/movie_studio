@@ -132,11 +132,24 @@ const Directors = () => {
               <>
                 <div
                   className="post"
-                  onClick={() => changeVideo(x.description)}
+                  onClick={() => {
+                    changeVideo(x.description);
+                    changeCredits(x.credits);
+                    changeTitle(x.name);
+                  }}
                 >
+                  <div className="video_name">
+                    <h2>{x.name}</h2>
+                  </div>
+
                   <img src={x.image} alt="video" />
                   <div className="post-s">
-                    <h2>{x.name}</h2>
+                    <h4>{x.director}</h4>
+                    <div className="post-info"></div>
+                    {/* <h2>{x.name}</h2> */}
+                    {/* <div className="post-info">
+                  <h3>hello</h3>
+                </div> */}
                   </div>
                 </div>
               </>
@@ -145,14 +158,24 @@ const Directors = () => {
               <>
                 <div
                   className="post"
-                  onClick={() => changeVideo(x.description)}
+                  onClick={() => {
+                    changeVideo(x.description);
+                    changeCredits(x.credits);
+                    changeTitle(x.name);
+                  }}
                 >
-                  <img src={x.image} alt="video" />
-                  <div className="post-s">
+                  <div className="video_name">
                     <h2>{x.name}</h2>
                   </div>
-                  <div className="post-info">
-                    <p>hello</p>
+
+                  <img src={x.image} alt="video" />
+                  <div className="post-s">
+                    <h4>{x.director}</h4>
+                    <div className="post-info"></div>
+                    {/* <h2>{x.name}</h2> */}
+                    {/* <div className="post-info">
+                  <h3>hello</h3>
+                </div> */}
                   </div>
                 </div>
               </>
@@ -160,7 +183,7 @@ const Directors = () => {
       </div>
 
       <div className="bio_container">
-        <h1>About</h1>
+        <h1>About Daniel</h1>
         <div className="bio_info">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
