@@ -202,7 +202,7 @@ const Directors = () => {
             ? "Maitland"
             : "Sarah"}
         </h3>{" "}
-        <div className="bio_info">
+        <div>
           {activeItem === "sarah" ? (
             <AboutSarah />
           ) : activeItem === "maitland" ? (
