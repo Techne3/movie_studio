@@ -32,18 +32,26 @@ const Directors = () => {
 
   ///
 
-  window.onscroll = function () {
-    growShrinkLogo();
-  };
-
   function growShrinkLogo() {
     let Logo = document.getElementById("logo");
-    if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
-      Logo.style.fontSize = "25px";
-    } else {
-      Logo.style.fontSize = "30px";
+    if (Logo.style !== null) {
+      if (
+        document.body.scrollTop > 5 ||
+        document.documentElement.scrollTop > 5
+      ) {
+        Logo.style.fontSize = "25px";
+      } else {
+        Logo.style.fontSize = "30px";
+      }
     }
   }
+
+  useEffect(() => {
+    growShrinkLogo();
+  }, []);
+  // window.onscroll = function () {
+  //   growShrinkLogo();
+  // };
 
   const pathname = window.location.pathname;
   const path = pathname === "/" ? "home" : pathname.substr(1);

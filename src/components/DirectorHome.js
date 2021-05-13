@@ -23,6 +23,24 @@ const Sidebar = () => {
 
   const [activeItem, setActiveItem] = useState(path);
 
+  // function growShrinkLogo() {
+  //   let Logo = document.getElementById("Logo");
+  //   if (Logo.style.fontSize !== null) {
+  //     if (
+  //       document.body.scrollTop > 5 ||
+  //       document.documentElement.scrollTop > 5
+  //     ) {
+  //       Logo.style.fontSize = "25px";
+  //     } else {
+  //       Logo.style.fontSize = "30px";
+  //     }
+  //   }
+  // }
+
+  // window.onscroll = function () {
+  //   growShrinkLogo();
+  // };
+
   return (
     <>
       <div className="logos_container">

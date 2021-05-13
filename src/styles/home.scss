@@ -1,0 +1,52 @@
+.title_container {
+  z-index: 999;
+  color: #fff;
+  font-size: 3.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.btn_home {
+  color: #fff;
+  text-decoration: none;
+}
+.btn_container {
+  z-index: 999;
+  color: #fff;
+  font-size: 3rem;
+  padding: 1rem;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  font-size: 2rem;
+}
+
+.btn_home::after,
+.btn_home::before {
+  border-radius: 1%;
+  border: 3px solid #fff;
+  content: "";
+  position: absolute;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.btn_home:hover::after {
+  transform: translate(-5px, -5px);
+}
+.btn_home:hover::before {
+  transform: translate(5px, 5px);
+}
+
+.image_container {
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
