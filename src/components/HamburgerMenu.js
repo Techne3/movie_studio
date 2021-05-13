@@ -72,7 +72,7 @@ const HamburgerMenu = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/" className="menu__link">
+              <NavLink to="/directors" className="menu__link">
                 Directors
               </NavLink>
             </li>
