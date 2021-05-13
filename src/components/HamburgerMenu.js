@@ -43,14 +43,14 @@ const HamburgerMenu = () => {
             role="menubar"
             aria-orientation="vertical"
           >
-            {activeItem === "dan" ||
+            {activeItem === "daniel" ||
             activeItem === "sarah" ||
             activeItem === "maitland" ? (
               <li>
                 <NavLink
                   to={`${activeItem}`}
                   className="menu__link"
-                  activeClassName="dan"
+                  activeClassName="daniel"
                   activeStyle={{ color: "gold" }}
                 >
                   {activeItem.charAt(0).toUpperCase() + activeItem.slice(1)}
@@ -63,17 +63,17 @@ const HamburgerMenu = () => {
                 className="menu__link"
                 activeStyle={{ color: "gold" }}
               >
-                CONTACT
+                Contact
               </NavLink>
             </li>
             <li>
               <NavLink to="/about" className="menu__link">
-                ABOUT
+                About
               </NavLink>
             </li>
             <li>
               <NavLink to="/" className="menu__link">
-                DIRECTORS
+                Directors
               </NavLink>
             </li>
           </ul>

@@ -55,8 +55,8 @@ const Directors = () => {
 
           <p className="dir_name">
             {" "}
-            {activeItem === "dan"
-              ? "Dan"
+            {activeItem === "daniel"
+              ? "Daniel"
               : activeItem === "maitland"
               ? "Maitland"
               : "Sarah"}
@@ -100,7 +100,7 @@ const Directors = () => {
         </>
       )}
       <div className="director_wrapper">
-        {activeItem === "dan"
+        {activeItem === "daniel"
           ? dan.info.map((x) => (
               <>
                 <div

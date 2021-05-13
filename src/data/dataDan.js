@@ -71,7 +71,7 @@ const dan = {
       _id: "7",
       name: "Sanitas Skincare HQ (2019)",
       description:
-        "https://player.vimeo.com/video/382695935?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "https://player.vimeo.com/video/382695935?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1",
       image: `${Sanitas}`,
       credits:
         "Cinematography by Daniel Sharkey & Robert Ortega. Edited by Daniel Sharkey",

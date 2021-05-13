@@ -8,9 +8,7 @@ import {
 } from "react-router-dom";
 
 import cats from "../images/cat.jpg";
-import cats2 from "../images/cat2.jpg";
 import cats3 from "../images/cats3.jpg";
-import test from "../images/test.gif";
 import tests from "../images/tests.gif";
 
 const Sidebar = () => {
@@ -43,8 +41,8 @@ const Sidebar = () => {
             backgroundSize: "cover",
             justifyContent: "center",
             alignItems: "center",
-            height: "80vh",
-            margin: "4rem 4rem",
+            height: "90vh",
+            margin: "3rem 5rem",
           }}
         >
           <input
@@ -81,12 +79,12 @@ const Sidebar = () => {
               aria-orientation="vertical"
             >
               <li>
-                <Link to="/contact" className="menu__link__contact">
+                <Link to="/contact" className="menu__link">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="menu__link__about">
+                <Link to="/about" className="menu__link">
                   About
                 </Link>
               </li>
@@ -97,7 +95,7 @@ const Sidebar = () => {
                   activeClassName="home"
                   activeStyle={{ color: "gold" }}
                 >
-                  DIRECTORS
+                  Directors
                 </NavLink>
               </li>
             </ul>
@@ -125,7 +123,7 @@ const Sidebar = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/dan" className="menu_link_dir">
+                <Link to="/daniel" className="menu_link_dir">
                   Daniel Sharkey
                 </Link>
               </li>
