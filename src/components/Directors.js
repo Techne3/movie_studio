@@ -32,18 +32,18 @@ const Directors = () => {
 
   ///
 
-  // window.onscroll = function () {
-  //   growShrinkLogo();
-  // };
+  window.onscroll = function () {
+    growShrinkLogo();
+  };
 
-  // function growShrinkLogo() {
-  //   var Logo = document.getElementById("Logo");
-  //   if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
-  //     Logo.style.fontSize = "25px";
-  //   } else {
-  //     Logo.style.fontSize = "35px";
-  //   }
-  // }
+  function growShrinkLogo() {
+    let Logo = document.getElementById("logo");
+    if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+      Logo.style.fontSize = "25px";
+    } else {
+      Logo.style.fontSize = "30px";
+    }
+  }
 
   const pathname = window.location.pathname;
   const path = pathname === "/" ? "home" : pathname.substr(1);
@@ -59,14 +59,14 @@ const Directors = () => {
           <p className="dir_name">
             {" "}
             {activeItem === "daniel"
-              ? "Daniel"
+              ? "Daniel Sharkey"
               : activeItem === "maitland"
-              ? "Maitland"
-              : "Sarah"}
+              ? "Maitland Lottimer"
+              : "Sarah Megysey"}
           </p>
         </div>
-        <Link to="/" className="logos" id="Logo">
-          LOGO
+        <Link to="/" className="logos" id="logo">
+          Anatomist Films
         </Link>
       </div>
       <HamburgerMenu />
@@ -186,14 +186,14 @@ const Directors = () => {
       </div>
 
       <div className="bio_container">
-        <h1>
+        <h3>
           About{" "}
           {activeItem === "daniel"
             ? "Daniel"
             : activeItem === "maitland"
             ? "Maitland"
             : "Sarah"}
-        </h1>{" "}
+        </h3>{" "}
         <div className="bio_info">
           {activeItem === "sarah" ? (
             <AboutSarah />

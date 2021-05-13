@@ -1,12 +1,12 @@
 import React from "react";
 
-import headShot from "../images/headShot.jpg";
+import hig from "../images/hig.jpeg";
 import "../styles/directorInfo.scss";
 
 const AboutDaniel = () => {
   return (
     <div>
-      <img src={headShot} alt="head-shot" className="head_shot" />
+      <img src={hig} alt="head-shot" className="head_shot" />
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim

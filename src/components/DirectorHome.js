@@ -27,7 +27,7 @@ const Sidebar = () => {
     <>
       <div className="logos_container">
         <Link to="/" className="logos" id="Logo">
-          LOGO
+          Anatomist Films
         </Link>
       </div>
       <div className="wrapper">
@@ -79,6 +79,11 @@ const Sidebar = () => {
               aria-orientation="vertical"
             >
               <li>
+                <Link to="/" className="menu__link">
+                  Home
+                </Link>
+              </li>
+              <li>
                 <Link to="/contact" className="menu__link">
                   Contact
                 </Link>
@@ -90,7 +95,7 @@ const Sidebar = () => {
               </li>
               <li>
                 <NavLink
-                  to="/"
+                  to="/directors"
                   className="menu__link"
                   activeClassName="home"
                   activeStyle={{ color: "gold" }}

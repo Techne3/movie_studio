@@ -59,6 +59,16 @@ const HamburgerMenu = () => {
             ) : null}
             <li>
               <NavLink
+                exact
+                to="/"
+                className="menu__link"
+                activeStyle={{ color: "gold" }}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
                 to="/contact"
                 className="menu__link"
                 activeStyle={{ color: "gold" }}

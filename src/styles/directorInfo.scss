@@ -12,7 +12,7 @@
   background-color: #fff;
 
   @media screen and (max-width: 760px) {
-    width: 85%;
+    width: 100%;
   }
 
   .post {
@@ -140,6 +140,31 @@
   justify-content: space-between;
 }
 
+.logos {
+  margin-right: 2rem;
+  text-decoration: none;
+  color: #000000;
+  z-index: 5;
+  font-size: 24px;
+  font-weight: 500;
+  transition: 0.4s;
+  @media screen and (max-width: 760px) {
+    position: absolute;
+    top: 1rem;
+    left: 20px;
+    font-size: 1.4rem;
+  }
+}
+
+.logos:hover {
+  color: gold;
+}
+#logo {
+  @media screen and (max-width: 760px) {
+    display: none !important;
+  }
+}
+
 .directors_name_container {
   margin-left: 2rem;
   display: flex;
@@ -169,24 +194,24 @@
   margin-bottom: 2rem;
 }
 .bio_container {
-  width: 80%;
-  // border: 2px solid #000;
+  width: 60%;
   display: flex;
   justify-content: center;
-  // align-items: center;
   flex-direction: column;
   margin: 4rem 2rem;
 }
-.bio_container h1 {
+.bio_container h3 {
   margin-bottom: 2rem;
-  margin-left: 2rem;
+  margin-left: 4rem;
+  font-weight: 100;
+  font-size: 2rem;
 }
 .bio_container p {
   margin: 3rem;
-  letter-spacing: 0.09rem;
 }
 
 .head_shot {
-  width: 85%;
+  width: 45%;
+  height: 10%;
   margin-left: 3rem;
 }
