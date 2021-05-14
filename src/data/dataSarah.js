@@ -10,7 +10,7 @@ const sarah = {
       _id: "1",
       name: "Andrea Gibson - Radio",
       description:
-        "https://player.vimeo.com/video/375990172?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "https://player.vimeo.com/video/375990172?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1",
       image: `${Farm}`,
       credits:
         "Radio from Andrea's record HEY GALAXY (2017) and the book, Lord of the Butterflies (2018)Featuring Jesse Thomas Andy Alseri on guitar, Brad Hooks on bgv's. Jesse Thomas vocals. Produced by Brad Hooks Directed, Shot and Edited by Sarah Megyesy ",
@@ -19,7 +19,7 @@ const sarah = {
       _id: "2",
       name: "Moon Rock ",
       description:
-        "https://player.vimeo.com/video/486132822?title=0&byline=0&portrait=0&speed=0&badge=0&autopause=0&player_id=0&app_id=58479/embed",
+        "https://player.vimeo.com/video/486132822?title=0&byline=0&portrait=0&speed=0&badge=0&autopause=0&player_id=0&app_id=58479/embed&autoplay=1",
       image: `${MoonRocks}`,
       credits:
         "Directed by Mike Clark Cinematography by Sarah Megyesy Animation by Daniel DiMarchi Music by Mike Clark",
@@ -29,7 +29,7 @@ const sarah = {
       name:
         "In a Dry Land (will eventually have a trailer rather than a 5 min sample):",
       description:
-        "https://player.vimeo.com/video/483868288?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "https://player.vimeo.com/video/483868288?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1",
       image: `${Drylands}`,
       credits:
         "Directed, Shot, and Edited by Sarah Megyesy Animation by Sabina Kariat Audio Editing and Sound Design by Kevin Larkin Original Music by Mike Clark, Kevin Larkin, Kawnar ",
@@ -38,7 +38,7 @@ const sarah = {
       _id: "4",
       name: "Videos That Matter - Butterfly ",
       description:
-        "https://player.vimeo.com/video/241036060?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "https://player.vimeo.com/video/241036060?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1",
       image: `${Butterflies}`,
       credits:
         "Directed, Shot, and Edited by Sarah Megyesy Special Effects by Evan McCandless Music by Rosin ",
@@ -47,7 +47,7 @@ const sarah = {
       _id: "5",
       name: "Andrea Gibson - Your Life",
       description:
-        "https://player.vimeo.com/video/546126261?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        "https://player.vimeo.com/video/546126261?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1",
       image: `${YourLife}`,
       credits:
         "'Your Life' from Andrea Gibson's album HEY GALAXY Directed, Shot and Edited by Sarah Megyesy In collaboration with Jordan Beyer Ali Bibbo ",

@@ -12,23 +12,32 @@ import AboutMaitland from "./AboutMaitland";
 import AboutDaniel from "./AboutDaniel";
 
 const Directors = () => {
-  const [videoPlayer, setVideoPlayer] = useState(null);
-  const [videoCredit, setVideoCredit] = useState(null);
-  const [videoTitle, setVideoTitle] = useState(null);
+  // const [videoPlayer, setVideoPlayer] = useState(null);
+  // const [videoCredit, setVideoCredit] = useState(null);
+  // const [videoTitle, setVideoTitle] = useState(null);
 
-  const changeVideo = (video) => {
-    setVideoPlayer(video);
+  const [videoInfo, setVideoInfo] = useState([
+    {
+      video: null,
+      credits: null,
+      title: null,
+    },
+  ]);
+
+  const changeVideo = (video, credits, title) => {
+    setVideoInfo(video, credits, title);
 
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const changeCredits = (credits) => {
-    setVideoCredit(credits);
-  };
-
-  const changeTitle = (title) => {
-    setVideoTitle(title);
-  };
+  useEffect(
+    (videoInfo) => {
+      if (videoInfo !== undefined) {
+        changeVideo();
+      }
+    },
+    [videoInfo.video, videoInfo.credits, videoInfo.title]
+  );
 
   ///
   const [header, setHeader] = useState("header");
@@ -55,6 +64,8 @@ const Directors = () => {
 
   const [activeItem, setActiveItem] = useState(path);
 
+  console.log(videoInfo.video);
+
   return (
     <>
       <div className={border} id="header_wrapper">
@@ -75,7 +86,7 @@ const Directors = () => {
         </Link>
       </div>
       <HamburgerMenu />
-      {videoPlayer && (
+      {videoInfo.video && (
         <>
           <div
             className="videoPlayerWrapper"
@@ -88,7 +99,7 @@ const Directors = () => {
           >
             <iframe
               title="casts"
-              src={videoPlayer}
+              src={videoInfo.video}
               style={{
                 // position: "absolute",
                 // top: "0",
@@ -102,8 +113,8 @@ const Directors = () => {
             ></iframe>
           </div>
           <div className="credit_wrapper">
-            <h3>{videoTitle}</h3>
-            <p>{videoCredit}</p>
+            <h3>{videoInfo.title}</h3>
+            <p>{videoInfo.credits}</p>
           </div>
         </>
       )}
@@ -113,11 +124,22 @@ const Directors = () => {
               <>
                 <div
                   className="post"
-                  onClick={() => {
-                    changeVideo(x.description);
-                    changeCredits(x.credits);
-                    changeTitle(x.name);
-                  }}
+                  onClick={() =>
+                    changeVideo({
+                      video: x.description,
+                      credits: x.credits,
+                      title: x.name,
+                    })
+                  }
+                  // onClick={() => {
+                  //   changeVideo({
+                  //     video: x.description,
+                  //     credits: x.credits,
+                  //     title: x.name,
+                  //   });
+                  //   // changeCredits(x.credits);
+                  //   // changeTitle(x.name);
+                  // }}
                 >
                   <div className="video_name">
                     <h2>{x.name}</h2>
@@ -140,11 +162,13 @@ const Directors = () => {
               <>
                 <div
                   className="post"
-                  onClick={() => {
-                    changeVideo(x.description);
-                    changeCredits(x.credits);
-                    changeTitle(x.name);
-                  }}
+                  onClick={() =>
+                    changeVideo({
+                      video: x.description,
+                      credits: x.credits,
+                      title: x.name,
+                    })
+                  }
                 >
                   <div className="video_name">
                     <h2>{x.name}</h2>
@@ -166,11 +190,13 @@ const Directors = () => {
               <>
                 <div
                   className="post"
-                  onClick={() => {
-                    changeVideo(x.description);
-                    changeCredits(x.credits);
-                    changeTitle(x.name);
-                  }}
+                  onClick={() =>
+                    changeVideo({
+                      video: x.description,
+                      credits: x.credits,
+                      title: x.name,
+                    })
+                  }
                 >
                   <div className="video_name">
                     <h2>{x.name}</h2>
