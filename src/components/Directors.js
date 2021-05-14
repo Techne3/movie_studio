@@ -31,27 +31,24 @@ const Directors = () => {
   };
 
   ///
+  const [header, setHeader] = useState("header");
+  const [border, setBorder] = useState("boarder_shadow");
 
-  function growShrinkLogo() {
-    let Logo = document.getElementById("logo");
-    if (Logo.style !== null) {
-      if (
-        document.body.scrollTop > 5 ||
-        document.documentElement.scrollTop > 5
-      ) {
-        Logo.style.fontSize = "25px";
-      } else {
-        Logo.style.fontSize = "30px";
-      }
+  const listenScrollEvent = (event) => {
+    if (window.scrollY < 5) {
+      setHeader("header");
+      setBorder("border_shadow");
+    } else if (window.scrollY > 5) {
+      setHeader("header2");
+      setBorder("no_border_shadow");
     }
-  }
+  };
 
   useEffect(() => {
-    growShrinkLogo();
+    window.addEventListener("scroll", listenScrollEvent);
+
+    return () => window.removeEventListener("scroll", listenScrollEvent);
   }, []);
-  // window.onscroll = function () {
-  //   growShrinkLogo();
-  // };
 
   const pathname = window.location.pathname;
   const path = pathname === "/" ? "home" : pathname.substr(1);
@@ -60,7 +57,7 @@ const Directors = () => {
 
   return (
     <>
-      <div className="logo_bar">
+      <div className={border} id="header_wrapper">
         <div className="directors_name_container">
           <p>Directors </p>
 
@@ -73,7 +70,7 @@ const Directors = () => {
               : "Sarah Megysey"}
           </p>
         </div>
-        <Link to="/" className="logos" id="logo">
+        <Link to="/" className={header} id="logo">
           Anatomist Films
         </Link>
       </div>

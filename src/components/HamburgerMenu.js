@@ -76,11 +76,11 @@ const HamburgerMenu = () => {
                 Contact
               </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink to="/about" className="menu__link">
                 About
               </NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink to="/directors" className="menu__link">
                 Directors

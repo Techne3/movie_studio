@@ -106,11 +106,11 @@ const Sidebar = () => {
                   Contact
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/about" className="menu__link">
                   About
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <NavLink
                   to="/directors"
