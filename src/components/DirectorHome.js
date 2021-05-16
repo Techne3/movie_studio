@@ -51,6 +51,7 @@ const Sidebar = () => {
       <div className="wrapper">
         <div
           className="image_area"
+          id="image_container"
           style={{
             display: "flex",
             backgroundImage: `url(${imageChanger})`,

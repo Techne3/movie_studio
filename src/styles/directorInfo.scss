@@ -103,7 +103,10 @@
   color: #fff;
   z-index: 2;
   font-weight: 100;
-  font-size: 20px;
+  font-size: 1rem;
+  @media screen and (max-width: 760px) {
+    font-size: 0.8rem;
+  }
 }
 
 .videoPlayerWrapper {
@@ -112,6 +115,11 @@
   // width: 100%;
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 760px) {
+    height: 25rem;
+    margin: 0;
+    padding: 0;
+  }
 }
 // .logos {
 //   display: flex;
@@ -196,6 +204,10 @@
 .credit_wrapper h3 {
   font-size: 2rem;
   margin-bottom: 2rem;
+  @media screen and (max-width: 760px) {
+    width: 100%;
+    font-size: 1rem;
+  }
 }
 .bio_container {
   width: 80%;
@@ -234,6 +246,13 @@
   display: flex;
   justify-content: center;
   margin: 0 2rem;
+  @media screen and (max-width: 760px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 .icon ul li {

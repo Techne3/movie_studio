@@ -5,38 +5,30 @@ import { Link } from "react-router-dom";
 
 import "../styles/home.scss";
 
-// function growShrinkLogo() {
-//   let Logo = document.getElementById("logo");
-//   if (Logo.style !== null) {
-//     if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
-//       Logo.style.fontSize = "25px";
-//       Logo.style.backgroundColor = "transparent !important";
-//     } else {
-//       Logo.style.fontSize = "30px";
-//       Logo.style.backgroundColor = "red !important";
-//     }
-//   }
-// }
-
-// window.onscroll = function () {
-//   growShrinkLogo();
-// };
-
 const Home = () => {
   return (
     <>
-      <div className="title_container">
-        <h3>Anatomist Films</h3>
-      </div>
-      <div className="btn_container">
-        <Link to="/directors" className="btn_home">
-          something
-        </Link>
-      </div>
+      <section className="showcase">
+        <header>
+          <h2 className="logo_home">Anatomist Films</h2>
+          <div className="toggle">menu</div>
+        </header>
+        <img src={still} alt="video" />
+        <div className="overlay"></div>
+        <div className="text">
+          <h2>Anatomist Films</h2>
+          <p>something about your company</p>
 
-      <div className="home_wrapper">
-        <img src={still} alt="dancing" className="image_container" />
-      </div>
+          <Link to="/directors">
+            <button className="btn_home">Explore</button>
+          </Link>
+        </div>
+        <ul className="social">
+          <li>LinkedIn</li>
+          <li>LinkedIn</li>
+        </ul>
+      </section>
+      <div className="menu"></div>
     </>
   );
 };

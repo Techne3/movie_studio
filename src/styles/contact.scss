@@ -1,1 +1,16 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background: #ede7f6;
+  justify-content: flex-end;
+}
 
+footer {
+  position: relative;
+  //   justify-content: flex-end;
+  width: 100%;
+  height: auto;
+  padding: 50px 100px;
+  background: #1c1d1c;
+}

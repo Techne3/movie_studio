@@ -1,35 +1,35 @@
-.title_container {
-  z-index: 999;
-  color: #fff;
-  font-size: 3.5rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
+// .title_container {
+//   z-index: 999;
+//   color: #fff;
+//   display: flex;
+//   justify-content: center;
+//   position: absolute;
+// }
 
 .btn_home {
   color: #fff;
   text-decoration: none;
+  z-index: 10;
+  padding: 10px 30px;
+  width: 200px;
+  height: 80px;
+  background: transparent;
+  border: none;
+  font-size: 1.5em;
+  margin-top: 2rem;
 }
 .btn_container {
-  z-index: 999;
-  color: #fff;
-  font-size: 3rem;
-  padding: 1rem;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  font-size: 2rem;
+  display: inline-block;
 }
 
 .btn_home::after,
 .btn_home::before {
-  border-radius: 1%;
+  border-radius: 6px;
   border: 3px solid #fff;
   content: "";
   position: absolute;
-  width: calc(100% - 6px);
-  height: calc(100% - 6px);
+  width: 200px;
+  height: 80px;
   left: 0;
   bottom: 0;
   z-index: -1;
@@ -44,9 +44,98 @@
 }
 
 .image_container {
-  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+// display: "flex",
+// backgroundImage: `url(${imageChanger})`,
+// backgroundRepeat: "no-repeat",
+// backgroundPosition: "center",
+// backgroundSize: "cover",
+// justifyContent: "center",
+// alignItems: "center",
+// height: "90vh",
+// margin: "3rem 5rem",
+
+.showcase {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  color: #fff;
+  z-index: 2;
+}
+
+.menu {
+  //   display: none;
+}
+.toggle {
+  position: relative;
+  //   width: 60px;
+  //   height: 60px;
+}
+.showcase header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.showcase img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #606161;
+  mix-blend-mode: overlay;
+}
+
+.text {
+  position: relative;
+  z-index: 10;
+}
+
+.text h2 {
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text p {
+  font-size: 1.1em;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
 }
