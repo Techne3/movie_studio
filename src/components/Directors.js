@@ -64,8 +64,6 @@ const Directors = () => {
 
   const [activeItem, setActiveItem] = useState(path);
 
-  console.log(videoInfo.video);
-
   return (
     <>
       <div className={border} id="header_wrapper">

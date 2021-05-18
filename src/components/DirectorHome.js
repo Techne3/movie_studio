@@ -117,7 +117,7 @@ const Sidebar = () => {
                   to="/directors"
                   className="menu__link"
                   activeClassName="home"
-                  activeStyle={{ color: "gold" }}
+                  activeStyle={{ color: "#96bfe6" }}
                 >
                   Directors
                 </NavLink>

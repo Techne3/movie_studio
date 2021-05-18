@@ -44,7 +44,7 @@
   --toggler-offset-right: 1.7rem;
   --toggler-offset-top: 50%;
   --toggler-color: rgb(17, 16, 16);
-  --toggler-color-hover: Gold;
+  --toggler-color-hover: #96bfe6;
 }
 
 // same as var(--toggler-line-number)
@@ -154,9 +154,8 @@ $total: 3;
   color: #000;
   font-weight: 100;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.6rem;
   line-height: 15vmin;
-  transition: all 0.35s ease-out;
   transition: all 0.35s ease-out;
   display: flex;
   justify-content: center;
@@ -166,6 +165,10 @@ $total: 3;
   &:focus,
   &:active {
     color: #96bfe6;
+  }
+
+  @media screen and (max-width: 760px) {
+    font-size: 1.2em;
   }
 }
 .menu_link_dir {
@@ -182,7 +185,7 @@ $total: 3;
   &:hover,
   &:focus,
   &:active {
-    color: Gold;
+    color: #96bfe6;
   }
 
   @media screen and (max-width: 760px) {
@@ -374,7 +377,6 @@ $total: 3;
   transition: background 0.3s;
   @media screen and (max-width: 760px) {
     width: 100vw;
-    background: red;
     margin: 0 !important;
   }
 }

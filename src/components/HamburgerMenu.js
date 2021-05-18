@@ -7,6 +7,8 @@ const HamburgerMenu = () => {
 
   const [activeItem, setActiveItem] = useState(path);
 
+  console.log("path here", pathname);
+
   return (
     <>
       <div className="wrapper">
@@ -17,19 +19,35 @@ const HamburgerMenu = () => {
           value="1"
           autofocus="true"
         />
-        <label
-          for="menuToggler"
-          id="menuTogglerLabel"
-          className="menu-toggler"
-          role="button"
-          aria-pressed="false"
-          aria-expanded="false"
-          aria-label="Navigation button"
-        >
-          <span className="menu-toggler__line"></span>
-          <span className="menu-toggler__line"></span>
-          <span className="menu-toggler__line"></span>
-        </label>
+        {pathname === "/" ? (
+          <label
+            for="menuToggler"
+            id="menuTogglerLabel"
+            className="menu-toggler"
+            role="button"
+            aria-pressed="false"
+            aria-expanded="false"
+            aria-label="Navigation button"
+          >
+            <span className="menu-toggler__line home_toggler"></span>
+            <span className="menu-toggler__line home_toggler"></span>
+            <span className="menu-toggler__line home_toggler"></span>
+          </label>
+        ) : (
+          <label
+            for="menuToggler"
+            id="menuTogglerLabel"
+            className="menu-toggler"
+            role="button"
+            aria-pressed="false"
+            aria-expanded="false"
+            aria-label="Navigation button"
+          >
+            <span className="menu-toggler__line "></span>
+            <span className="menu-toggler__line "></span>
+            <span className="menu-toggler__line "></span>
+          </label>
+        )}
         <nav
           id="sidebar"
           className="sidebar"
@@ -51,7 +69,7 @@ const HamburgerMenu = () => {
                   to={`${activeItem}`}
                   className="menu__link"
                   activeClassName="daniel"
-                  activeStyle={{ color: "gold" }}
+                  activeStyle={{ color: "#96bfe6" }}
                 >
                   {activeItem.charAt(0).toUpperCase() + activeItem.slice(1)}
                 </NavLink>
@@ -62,7 +80,7 @@ const HamburgerMenu = () => {
                 exact
                 to="/"
                 className="menu__link"
-                activeStyle={{ color: "gold" }}
+                activeStyle={{ color: "#96bfe6" }}
               >
                 Home
               </NavLink>
@@ -71,7 +89,7 @@ const HamburgerMenu = () => {
               <NavLink
                 to="/contact"
                 className="menu__link"
-                activeStyle={{ color: "gold" }}
+                activeStyle={{ color: "#96bfe6" }}
               >
                 Contact
               </NavLink>

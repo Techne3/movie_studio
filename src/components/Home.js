@@ -4,14 +4,16 @@ import still from "../images/Agg Doc Still (1).jpg";
 import { Link } from "react-router-dom";
 
 import "../styles/home.scss";
+import HamburgerMenu from "./HamburgerMenu";
 
 const Home = () => {
   return (
     <>
+      <HamburgerMenu />
       <section className="showcase">
         <header>
           <h2 className="logo_home">Anatomist Films</h2>
-          <div className="toggle">menu</div>
+          {/* <div className="toggle">menu</div> */}
         </header>
         <img src={still} alt="video" />
         <div className="overlay"></div>
