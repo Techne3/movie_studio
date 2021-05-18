@@ -168,7 +168,8 @@ $total: 3;
   }
 
   @media screen and (max-width: 760px) {
-    font-size: 1.2em;
+    font-size: 1.6rem;
+    line-height: 20vmin;
   }
 }
 .menu_link_dir {
@@ -189,7 +190,8 @@ $total: 3;
   }
 
   @media screen and (max-width: 760px) {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    line-height: 12vmin;
   }
 }
 // .menu__link__contact {

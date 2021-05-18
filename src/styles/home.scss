@@ -11,12 +11,13 @@
   text-decoration: none;
   z-index: 10;
   padding: 10px 30px;
-  width: 200px;
-  height: 80px;
+  width: 250px;
+  height: 75px;
   background: transparent;
   border: none;
   font-size: 1.5em;
   margin-top: 2rem;
+  cursor: pointer;
 }
 .btn_container {
   display: inline-block;
@@ -28,8 +29,8 @@
   border: 3px solid #fff;
   content: "";
   position: absolute;
-  width: 200px;
-  height: 80px;
+  width: 250px;
+  height: 75px;
   left: 0;
   bottom: 0;
   z-index: -1;
@@ -82,7 +83,7 @@
   //   display: none;
 }
 .toggle {
-  position: relative;
+  // position: relative;
   //   width: 60px;
   //   height: 60px;
 }
@@ -91,11 +92,14 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 40px 100px;
+  padding: 40px 50px;
   z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  transition: 0.2s ease;
+  cursor: pointer;
+
+  @media screen and (max-width: 760px) {
+    padding: 25px;
+  }
 }
 
 .logo {

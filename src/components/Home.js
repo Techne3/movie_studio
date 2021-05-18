@@ -12,7 +12,7 @@ const Home = () => {
       <HamburgerMenu />
       <section className="showcase">
         <header>
-          <h2 className="logo_home">Anatomist Films</h2>
+          <h2>Anatomist Films</h2>
           {/* <div className="toggle">menu</div> */}
         </header>
         <img src={still} alt="video" />

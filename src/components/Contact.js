@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import HamburgerMenu from "./HamburgerMenu";
 
 import { Link } from "react-router-dom";
@@ -15,10 +15,30 @@ import mts from "../images/mts.jpg";
 import "../styles/contact.scss";
 
 const Contact = () => {
+  const [headerContact, setHeaderContact] = useState("header_Contact");
+  const [borderContact, setBorderContact] = useState("boarder_shadow_Contact");
+
+  const listenScrollEvent = (event) => {
+    if (window.scrollY < 5) {
+      setHeaderContact("header_contact");
+      setBorderContact("border_shadow_contact");
+    } else if (window.scrollY > 5) {
+      setHeaderContact("header2_contact");
+      setBorderContact("no_border_shadow_contact");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+
+    return () => window.removeEventListener("scroll", listenScrollEvent);
+  }, []);
+
+  const [isMenuActive, setIsMenuActive] = useState(false);
   return (
     <>
-      <div className="logos_container_contact">
-        <Link to="/" className="logos" id="Logo_contact">
+      <div className={borderContact}>
+        <Link to="/" className={headerContact} id="Logo_contact">
           Anatomist Films
         </Link>
       </div>

@@ -7,12 +7,11 @@ const HamburgerMenu = () => {
 
   const [activeItem, setActiveItem] = useState(path);
 
-  console.log("path here", pathname);
-
   return (
     <>
       <div className="wrapper">
         <input
+          // onClick={setIsMenuActive(!isMenuActive)}
           type="checkbox"
           id="menuToggler"
           className="input-toggler"
