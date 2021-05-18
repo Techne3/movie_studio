@@ -1,10 +1,12 @@
 import React from "react";
 
-import still from "../images/Agg Doc Still (1).jpg";
+import still from "../images/mainHome.jpg";
 import { Link } from "react-router-dom";
 
 import "../styles/home.scss";
 import HamburgerMenu from "./HamburgerMenu";
+
+import { FaLinkedinIn, FaVimeo, FaVimeoV } from "react-icons/fa";
 
 const Home = () => {
   return (
@@ -19,16 +21,26 @@ const Home = () => {
         <div className="overlay"></div>
         <div className="text">
           <h2>Anatomist Films</h2>
-          <p>something about your company</p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error a
+            ratione quod cupiditate aperiam ea mollitia animi ad reiciendis!
+            Iure.
+          </p>
 
           <Link to="/directors">
             <button className="btn_home">Explore</button>
           </Link>
         </div>
-        <ul className="social">
-          <li>LinkedIn</li>
-          <li>LinkedIn</li>
-        </ul>
+        {/* <div className="social_links_home">
+          <ul className="social">
+            <li>
+              <FaLinkedinIn />
+            </li>
+            <li>
+              <FaVimeoV />
+            </li>
+          </ul>
+        </div> */}
       </section>
       <div className="menu"></div>
     </>

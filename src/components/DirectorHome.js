@@ -11,6 +11,10 @@ import cats from "../images/cat.jpg";
 import cats3 from "../images/cats3.jpg";
 import tests from "../images/tests.gif";
 
+import MakingOf50 from "../images/maitland/MakingOf50.jpg";
+import Joes3b from "../images/sarah/Joes3b.jpg";
+import stillDan from "../images/mainHome.jpg";
+
 const Sidebar = () => {
   const [imageChanger, setImageChanger] = useState(`${tests}`);
 
@@ -131,7 +135,7 @@ const Sidebar = () => {
                   style={{ textDecoration: "none" }}
                   to="/maitland"
                   className="menu_link_dir"
-                  onMouseEnter={(e) => changeImage(`${cats}`)}
+                  onMouseEnter={(e) => changeImage(`${MakingOf50}`)}
                 >
                   Maitland Lottimer
                 </Link>
@@ -141,13 +145,17 @@ const Sidebar = () => {
                   style={{ textDecoration: "none" }}
                   to="/sarah"
                   className="menu_link_dir"
-                  onMouseEnter={(e) => changeImage(`${cats3}`)}
+                  onMouseEnter={(e) => changeImage(`${Joes3b}`)}
                 >
                   Sarah Megysey
                 </Link>
               </li>
               <li>
-                <Link to="/daniel" className="menu_link_dir">
+                <Link
+                  to="/daniel"
+                  className="menu_link_dir"
+                  onMouseEnter={(e) => changeImage(`${stillDan}`)}
+                >
                   Daniel Sharkey
                 </Link>
               </li>

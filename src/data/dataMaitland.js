@@ -12,21 +12,21 @@ const maitland = {
   info: [
     {
       _id: "1",
-      name: "OCTA - COMMERCIAL",
-      description:
-        "https://player.vimeo.com/video/545216320?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1",
-      image: `${Ocat}`,
-      credits:
-        "Cinematography: Maitland Lottimer and Austin Lottimer Director: Maitland Lottimer and Austin Lottimer Editor: Maitland Lottimer Graphics: Austin Lottimer",
-    },
-    {
-      _id: "2",
       name: "Making of 50 Wings - Art of James Surls",
       description:
         "https://player.vimeo.com/video/545222554?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1",
       image: `${MakingOf}`,
       credits:
         "Director: Maitland Lottimer & Austin Lottimer Cinematography: Maitland Lottimer & Austin Lottimer Editor: Maitland LottimerMusic: Maitland Lottimer Producer: Ashley Arnold",
+    },
+    {
+      _id: "2",
+      name: "OCTA - COMMERCIAL",
+      description:
+        "https://player.vimeo.com/video/545216320?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1",
+      image: `${Ocat}`,
+      credits:
+        "Cinematography: Maitland Lottimer and Austin Lottimer Director: Maitland Lottimer and Austin Lottimer Editor: Maitland Lottimer Graphics: Austin Lottimer",
     },
     {
       _id: "3",
@@ -39,12 +39,12 @@ const maitland = {
     },
     {
       _id: "4",
-      name: "NATHAN SPORTS  - MIGUEL STORY",
+      name: "MODERN MAPS - RADIO KILLER (MUSIC VIDEO)",
       description:
-        "https://player.vimeo.com/video/546164201?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1",
-      image: `${Nathan}`,
+        "https://player.vimeo.com/video/545217826?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1",
+      image: `${ModernMaps}`,
       credits:
-        " Director: Maitland Lottimer & Austin Lottimer Cinematography: Maitland Lottimer & Austin Lottimer Editor: Maitland Lottimer Producer: Ashley Arnold",
+        "Director: Maitland Lottimer Cinematography: Maitland Lottimer Editor: Maitland Lottimer 1st AD: Arnar Jonsson",
     },
     {
       _id: "5",
@@ -57,6 +57,24 @@ const maitland = {
     },
     {
       _id: "6",
+      name: "DON THURL - TRUST",
+      description:
+        "https://player.vimeo.com/video/393016364?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1",
+      image: `${DonThurl}`,
+      credits:
+        "Director: Maitland Lottimer Cinematography: Arnar Jonsson Editor: Maitland Lottimer",
+    },
+    {
+      _id: "7",
+      name: "NATHAN SPORTS  - MIGUEL STORY",
+      description:
+        "https://player.vimeo.com/video/546164201?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1",
+      image: `${Nathan}`,
+      credits:
+        " Director: Maitland Lottimer & Austin Lottimer Cinematography: Maitland Lottimer & Austin Lottimer Editor: Maitland Lottimer Producer: Ashley Arnold",
+    },
+    {
+      _id: "8",
       name: "GILDED - SHORT FILM",
       description:
         "https://player.vimeo.com/video/546140624?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1",
@@ -65,31 +83,13 @@ const maitland = {
         "Director: Maitland Lottimer Cinematography: Austin Lottimer Editor: Maitland Lottimer Music: Maitland Lottimer & David Oneal 1st AD: Einar Petersson Gaffer: Grétar Már Garðarsson Producers: Maitland Lottimer, Atli Fjalarsson, Barclay Lottimer Starring: Atli Fjalarsson, Unna Eggerts, Elias Hanse",
     },
     {
-      _id: "7",
-      name: "MODERN MAPS - RADIO KILLER (MUSIC VIDEO)",
-      description:
-        "https://player.vimeo.com/video/545217826?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1",
-      image: `${ModernMaps}`,
-      credits:
-        "Director: Maitland Lottimer Cinematography: Maitland Lottimer Editor: Maitland Lottimer 1st AD: Arnar Jonsson",
-    },
-    {
-      _id: "8",
+      _id: "9",
       name: "MAGIC WHATEVER - ROSE COLORED GLASSES (MUSIC VIDEO)",
       description:
         "https://player.vimeo.com/video/545673136?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1",
       image: `${Magic}`,
       credits:
         "Director: Maitland Lottimer Cinematography: Daniel Sharkey Editor: Maitland Lottimer Colorist: Daniel Sharkey",
-    },
-    {
-      _id: "9",
-      name: "DON THURL - TRUST",
-      description:
-        "https://player.vimeo.com/video/393016364?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1",
-      image: `${DonThurl}`,
-      credits:
-        "Director: Maitland Lottimer Cinematography: Arnar Jonsson Editor: Maitland Lottimer",
     },
   ],
 };
