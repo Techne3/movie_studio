@@ -13,6 +13,7 @@ import {
 import { GrMail } from "react-icons/gr";
 import mts from "../images/mts.jpg";
 import "../styles/contact.scss";
+import Home from "./Home";
 
 const Contact = () => {
   const [headerContact, setHeaderContact] = useState("header_Contact");
@@ -128,9 +129,23 @@ const Contact = () => {
             <div className="sec quickLinks">
               <h2>Quick Links</h2>
               <ul>
-                <li>About</li>
-                <li>About</li>
-                <li>About</li>
+                <li>
+                  {" "}
+                  <Link to="/maitland" className="links">
+                    Maitland Lottimer
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/sarah" className="links">
+                    Sarah Megysey
+                  </Link>
+                </li>
+                <li>
+                  {" "}
+                  <Link to="/daniel" className="links">
+                    Daniel Sharkey
+                  </Link>
+                </li>
               </ul>
             </div>
             <div className="sec contact">
@@ -152,7 +167,9 @@ const Contact = () => {
                   <span>
                     <GrMail />
                   </span>
-                  <span> DanielSharkey@gmail.com</span>
+                  <span>
+                    <a href="mailto:someone@yoursite.com">Email Us</a>
+                  </span>
                 </li>
               </ul>
             </div>

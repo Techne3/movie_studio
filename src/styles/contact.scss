@@ -1,20 +1,20 @@
-.logo_contact {
-  position: absolute;
-  top: 1rem;
-  left: 45px;
-  text-decoration: none;
-  color: #fff;
-  z-index: 5;
-  font-size: 1.4rem;
-  font-weight: 500;
-  transition: 0.4s;
-  @media screen and (max-width: 760px) {
-    position: absolute;
-    top: 0.8rem;
-    left: 20px;
-    font-size: 1.4rem;
-  }
-}
+// .logo_contact {
+//   position: absolute;
+//   top: 1rem;
+//   left: 45px;
+//   text-decoration: none;
+//   color: #fff;
+//   z-index: 5;
+//   font-size: 1.4rem;
+//   font-weight: 500;
+//   transition: 0.4s;
+//   @media screen and (max-width: 760px) {
+//     position: absolute;
+//     top: 0.8rem;
+//     left: 20px;
+//     font-size: 1.4rem;
+//   }
+// }
 
 .contact_wrapper {
   display: flex;
@@ -26,26 +26,24 @@
 .contact_info_container {
   height: 500px;
   background: #4f7b87;
+  margin-top: 2rem;
   //   position: absolute;
   //   top: 0;
 }
 
-footer {
-  //   display: flex;
-  //   justify-content: flex-end;
-  //   align-items: flex-end;
-  //   background: rgb(14, 30, 58);
-}
-
 .topImgContainer {
-  overflow: hidden;
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 600px;
+  //   height: 800px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   @media screen and (max-width: 760px) {
     width: 100%;
-    height: 300px;
+    // height: 300px;
   }
 }
 .topImg {
@@ -146,6 +144,11 @@ footer p {
   list-style: none;
   margin-bottom: 10px;
 }
+.quickLinks .links {
+  list-style: none;
+  text-decoration: none;
+  color: #d1cfcf;
+}
 
 .contact {
   margin-top: 4rem;
@@ -158,6 +161,10 @@ footer p {
 }
 .sec.contact span {
   margin-left: 1rem;
+}
+.sec.contact span a {
+  text-decoration: none;
+  color: #d1cfcf;
 }
 .copyright {
   margin-bottom: 2rem;
@@ -172,13 +179,13 @@ footer p {
 .contact_info_container {
   display: flex;
   flex-direction: row !important;
-  margin-bottom: 8rem;
+  margin-bottom: 15rem;
 }
 
 .contact_info_container h3 {
   color: #fff;
-  font-size: 1.9em;
-  font-weight: 500;
+  font-size: 2.3em;
+  font-weight: 100;
 }
 
 .team_members {
@@ -238,6 +245,10 @@ footer p {
   font-weight: 500;
   transition: 0.4s;
   background: transparent;
+
+  &:hover {
+    color: #96bfe6;
+  }
 }
 
 .header2_contact {
@@ -279,7 +290,7 @@ footer p {
   //   justify-content: space-between;
 }
 .no_border_shadow_contact {
-  box-shadow: 0 4px 6px -6px #b6b5b5;
+  box-shadow: 0 4px 6px -6px #4140409c;
   width: 100%;
   height: 80px;
   background: #4f7b87;
@@ -287,8 +298,4 @@ footer p {
   overflow: hidden;
   top: 0;
   z-index: 9;
-
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: space-between;
 }
