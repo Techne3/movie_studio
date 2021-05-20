@@ -97,19 +97,26 @@
 .post:hover .video_name h2 {
   color: gold;
   transition: 1s ease;
+  z-index: 20000;
+  // font-size: 1.2rem;
+  // font-weight: 500;
 }
-.video_name {
+.video_name h2 {
   position: absolute;
   top: 100px;
   left: 20px;
   color: #fff;
-  z-index: 2;
-  font-weight: 100;
-  font-size: 1rem;
+  z-index: -2;
+  font-size: 20px;
+  font-weight: 300;
+  font-size: 1.4rem;
   @media screen and (max-width: 760px) {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
+// .video_name h2:hover {
+//   z-index: 1000;
+// }
 
 .videoPlayerWrapper {
   padding-top: 2rem;
@@ -362,6 +369,6 @@
   z-index: 10000000000;
   position: absolute;
   color: #fff;
-  top: 70%;
+  top: 0%;
   left: 40%;
 }

@@ -34,7 +34,8 @@ const Directors = () => {
   const changeVideo = (video, credits, title) => {
     setVideoInfo(video, credits, title);
 
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    // window.scrollTo({ top: 0, behavior: "smooth" });
+    setIsModalOpened(true);
   };
 
   useEffect(
@@ -96,7 +97,7 @@ const Directors = () => {
         <HamburgerMenu />
         {videoInfo.video && (
           <>
-            <div
+            {/* <div
               className="videoPlayerWrapper"
               style={{
                 display: "flex",
@@ -123,7 +124,7 @@ const Directors = () => {
             <div className="credit_wrapper">
               <h3>{videoInfo.title}</h3>
               <p>{videoInfo.credits}</p>
-            </div>
+            </div> */}
           </>
         )}
         <div className="director_wrapper">
@@ -139,15 +140,6 @@ const Directors = () => {
                         title: x.name,
                       })
                     }
-                    // onClick={() => {
-                    //   changeVideo({
-                    //     video: x.description,
-                    //     credits: x.credits,
-                    //     title: x.name,
-                    //   });
-                    //   // changeCredits(x.credits);
-                    //   // changeTitle(x.name);
-                    // }}
                   >
                     <div className="video_name">
                       <h2>{x.name}</h2>
@@ -157,10 +149,6 @@ const Directors = () => {
                     <div className="post-s">
                       <h4>{x.director}</h4>
                       <div className="post-info"></div>
-                      {/* <h2>{x.name}</h2> */}
-                      {/* <div className="post-info">
-                      <h3>hello</h3>
-                    </div> */}
                     </div>
                   </div>
                 </>
@@ -186,10 +174,6 @@ const Directors = () => {
                     <div className="post-s">
                       <h4>{x.director}</h4>
                       <div className="post-info"></div>
-                      {/* <h2>{x.name}</h2> */}
-                      {/* <div className="post-info">
-                  <h3>hello</h3>
-                </div> */}
                     </div>
                   </div>
                 </>
@@ -214,10 +198,6 @@ const Directors = () => {
                     <div className="post-s">
                       <h4>{x.director}</h4>
                       <div className="post-info"></div>
-                      {/* <h2>{x.name}</h2> */}
-                      {/* <div className="post-info">
-                  <h3>hello</h3>
-                </div> */}
                     </div>
                   </div>
                 </>
@@ -243,40 +223,27 @@ const Directors = () => {
             )}
           </div>
         </div>
-        {/* <React.Fragment className="modal">
-          <ModalVideo
-            channel="vimeo"
-            autoplay="true"
-            isOpen={isOpen}
-            videoId="227993794"
-            onClose={() => setOpen(false)}
-            title="false"
-            controls="0"
-            showinfo="1"
-            h1="HELLO"
-            open-Message="cats"
-          />
-
-          <button className="btn-primary" onClick={() => setOpen(true)}>
-            VIEW DEMO
-          </button>
-        </React.Fragment> */}
 
         <>
-          <div className="container">
-            <button className="btn" onClick={() => setIsModalOpened(true)}>
-              Open modal 1
-            </button>
-          </div>
-
           {isModalOpened && (
             <Modal
-              title="Modal title"
               duration={500}
               onClose={() => setIsModalOpened(false)}
               showCloseBtn
+              credits={videoInfo.credits}
+              title={videoInfo.title}
             >
-              <p>Lorem ipsum dolor sit amet.</p>
+              <iframe
+                title="casts"
+                src={videoInfo.video}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                }}
+                frameborder="0"
+                allow="autoplay; fullscreen;"
+                allowfullscreen
+              ></iframe>
             </Modal>
           )}
         </>

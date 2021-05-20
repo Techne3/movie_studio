@@ -1,7 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
+import "../styles/modal.scss";
 
-const Modal = ({ title, children, onClose, duration = 300, showCloseBtn }) => {
+import { GrClose } from "react-icons/gr";
+import { AiOutlineClose } from "react-icons/ai";
+
+const Modal = ({
+  title,
+  children,
+  onClose,
+  duration = 300,
+  showCloseBtn,
+  credits,
+}) => {
   const modal = useRef();
   const modalBg = useRef();
   const modalContent = useRef();
@@ -13,7 +24,7 @@ const Modal = ({ title, children, onClose, duration = 300, showCloseBtn }) => {
     modalContent.current.style.transitionDuration = duration + "ms";
 
     setTimeout(() => {
-      modalBg.current.style.opacity = 0.2;
+      modalBg.current.style.opacity = 0.98;
       modalContent.current.style.opacity = 1;
       modalContent.current.style.top = 0;
     }, 20);
@@ -50,18 +61,19 @@ const Modal = ({ title, children, onClose, duration = 300, showCloseBtn }) => {
       ></div>
       <div className="modal__inner" ref={modalContent}>
         <div className="modal__head">
-          <h2>{title}</h2>
+          {/* <h2>{title}</h2> */}
           {showCloseBtn && (
-            <button className="btn" onClick={(e) => modalCloseHandler(e)}>
-              &times;
-            </button>
+            <AiOutlineClose
+              className="showClose"
+              onClick={(e) => modalCloseHandler(e)}
+            />
           )}
         </div>
         <div className="modal__body">{children}</div>
         <div className="modal__foot">
-          <a href="/#" onClick={(e) => modalCloseHandler(e)}>
-            Close
-          </a>
+          <h3>{title}</h3>
+          <p>{credits}</p>
+          {/* <button onClick={(e) => modalCloseHandler(e)}>Close</button> */}
         </div>
       </div>
     </div>
