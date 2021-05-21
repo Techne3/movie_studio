@@ -7,8 +7,9 @@ import "../styles/carousel.scss";
 
 import { Link } from "react-router-dom";
 
-import cats from "../images/cat.jpg";
-import cats3 from "../images/cats3.jpg";
+import sarahCover from "../images/sarah/SarahCover.jpg";
+import maitlandCover from "../images/maitland/MaitlandCover.jpg";
+import danCover from "../images/dan/DanCover.jpg";
 
 const responsive = {
   desktop: {
@@ -32,19 +33,19 @@ const responsive = {
 const obj = {
   info: [
     {
-      _id: 0,
-      names: "dan",
-      links: "/daniel",
-      img: `${cats}`,
-    },
-    {
-      names: "sarah",
-      links: "/sarah",
-      img: `${cats3}`,
-    },
-    {
-      names: "maitland",
+      names: "Maitland Lottimer",
       links: "/maitland",
+      img: `${maitlandCover}`,
+    },
+    {
+      names: "Sarah Megysey",
+      links: "/sarah",
+      img: `${sarahCover}`,
+    },
+    {
+      names: "Daniel Sharkey",
+      links: "/daniel",
+      img: `${danCover}`,
     },
   ],
 };
@@ -63,15 +64,13 @@ const CustomDot = ({ onClick, ...rest }) => {
   // active is provided by this lib for checking if the item is active or not.
   // console.log(Object.entries(colors.info).color[index], "here is the info");
 
-  // console.log(Object.keys(obj.info.names));
   let names = obj.info.map((x, index) => x.links)[index];
-  console.log(names);
   return (
     <div className="names_container">
       <div className="btn_container">
         <Link
           to={`${names}`}
-          className={active ? "active" : "inactive"}
+          className={active ? "active_car" : "inactive_car"}
           onMouseEnter={() => onClick()}
         >
           {obj.info.map((x, index) => x.names)[index]}
@@ -106,11 +105,12 @@ const CarouselComp = ({ deviceType, renderButtonGroupOutside }) => {
                 <div
                   style={{
                     backgroundImage: `url(${images.img})`,
-                    width: "100%",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center",
+                    backgroundSize: "cover",
+                    justifyContent: "center",
+                    alignItems: "center",
                     height: "100vh",
-                    display: "flex",
-                    justifyContent: "flexEnd",
-                    alignItems: "flexEnd",
                   }}
                 >
                   hello

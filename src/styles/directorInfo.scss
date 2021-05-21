@@ -102,7 +102,7 @@
 .post:hover .video_name h2 {
   color: gold;
   transition: 1s ease;
-  z-index: 20000;
+  z-index: 2;
   // font-size: 1.2rem;
   // font-weight: 500;
 }
@@ -368,12 +368,4 @@
   animation-name: modal-video;
   transition: opacity 0.3s ease-out;
   color: #fff;
-}
-
-.testers {
-  z-index: 10000000000;
-  position: absolute;
-  color: #fff;
-  top: 0%;
-  left: 40%;
 }

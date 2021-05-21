@@ -7,11 +7,20 @@
   justify-content: center;
   align-items: start;
 }
-.active {
-  color: green;
-  font-size: 60px;
+.active_car {
+  font-size: 30px;
+  transition: 0.3s ease;
+  list-style: none;
+  text-decoration: none;
+  color: red;
 }
-.inactive {
+.active_car:hover {
+  color: red;
+}
+.inactive_car {
+  color: #fff;
+  list-style: none;
+  text-decoration: none;
 }
 
 .names_container {
@@ -23,6 +32,7 @@
   //   left: 0;
 }
 .btn_container {
+  transition: 1s ease;
 }
 
 .my-own-custom-container {
