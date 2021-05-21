@@ -48,7 +48,7 @@ const Sidebar = () => {
   return (
     <>
       <div className="logos_container">
-        <Link to="/" className="logos" id="Logo">
+        <Link to="/" className="logos brand" id="Logo">
           Anatomist Films
         </Link>
       </div>
@@ -121,7 +121,7 @@ const Sidebar = () => {
                   to="/directors"
                   className="menu__link"
                   activeClassName="home"
-                  activeStyle={{ color: "#96bfe6" }}
+                  activeStyle={{ color: "#ff331a" }}
                 >
                   Directors
                 </NavLink>

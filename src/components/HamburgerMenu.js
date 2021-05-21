@@ -60,35 +60,11 @@ const HamburgerMenu = () => {
             role="menubar"
             aria-orientation="vertical"
           >
-            {activeItem === "daniel" ||
-            activeItem === "sarah" ||
-            activeItem === "maitland" ? (
-              <li>
-                <NavLink
-                  to={`${activeItem}`}
-                  className="menu__link"
-                  activeClassName="daniel"
-                  activeStyle={{ color: "#96bfe6" }}
-                >
-                  {activeItem.charAt(0).toUpperCase() + activeItem.slice(1)}
-                </NavLink>
-              </li>
-            ) : null}
-            <li>
-              <NavLink
-                exact
-                to="/"
-                className="menu__link"
-                activeStyle={{ color: "#96bfe6" }}
-              >
-                Home
-              </NavLink>
-            </li>
             <li>
               <NavLink
                 to="/contact"
                 className="menu__link"
-                activeStyle={{ color: "#96bfe6" }}
+                activeStyle={{ color: "#ff331a" }}
               >
                 Contact
               </NavLink>

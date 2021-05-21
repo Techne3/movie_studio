@@ -83,7 +83,7 @@ const CarouselComp = ({ deviceType, renderButtonGroupOutside }) => {
   return (
     <>
       <div className="logos_container">
-        <Link to="/" className="logos" id="Logo">
+        <Link to="/" className="logos brand" id="Logo">
           Anatomist Films
         </Link>
       </div>
@@ -98,6 +98,8 @@ const CarouselComp = ({ deviceType, renderButtonGroupOutside }) => {
           dotListClass="custom-dot-list-style"
           customDot={<CustomDot />}
           renderDotsOutside={renderButtonGroupOutside}
+          // transitionDuration={4000}
+          // customTransition="all 1"
         >
           {obj.info.map((images) => {
             return (

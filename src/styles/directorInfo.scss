@@ -100,7 +100,7 @@
   transform: translateY(80%);
 }
 .post:hover .video_name h2 {
-  color: gold;
+  color: #ff331a;
   transition: 1s ease;
   z-index: 2;
   // font-size: 1.2rem;
@@ -179,11 +179,11 @@
 }
 
 .logos:hover {
-  color: #96bfe6;
+  color: #ff331a;
 }
 
 #logo:hover {
-  color: #96bfe6;
+  color: #ff331a;
 }
 #logo {
   @media screen and (max-width: 760px) {
@@ -199,7 +199,7 @@
   // justify-content: center;
 }
 .dir_name {
-  color: #96bfe6;
+  color: #ff331a;
   margin-left: 0.4rem;
 }
 
@@ -302,6 +302,7 @@
   font-size: 24px;
   font-weight: 500;
   transition: 0.4s;
+  font-family: "Bebas Neue", cursive;
   @media screen and (max-width: 760px) {
     position: absolute;
     top: 1rem;
@@ -318,6 +319,7 @@
   font-size: 30px;
   font-weight: 500;
   transition: 0.4s;
+  font-family: "Bebas Neue", cursive;
 }
 
 .border_shadow {
