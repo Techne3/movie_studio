@@ -19,15 +19,20 @@
 
   .post {
     font-family: "Montserrat", sans-serif;
-    margin: 1.3rem;
-    width: 475px;
-    height: 300px;
+    margin: 0.2rem;
+    width: 1008px;
+    height: 430px;
     position: relative;
     cursor: pointer;
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
     overflow: hidden;
   }
+  // @media screen and (min-width: 1008px) {
+  //   width: 1750px;
+  //   height: 300px;
+  //   position: relative;
+  // }
 }
 
 // .hover02 figure img {
@@ -48,17 +53,17 @@
 // }
 .post:hover .post-s {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  width: 575px;
+  width: 100%;
 }
 .post img {
   display: block;
-  width: 575px;
-  height: 350px;
+  width: 100%;
+  height: 650px;
   transition: 0.3s ease-in-out;
 }
 .post:hover img {
-  width: 650px;
-  height: 400px;
+  // width: 650px;
+  // height: 400px;
 }
 .post-s {
   clip-path: polygon(0 0, 100% 0, 0 100%, 0% 100%);
@@ -103,12 +108,12 @@
 }
 .video_name h2 {
   position: absolute;
-  top: 100px;
-  left: 20px;
+  top: 50%;
+  left: 10%;
   color: #fff;
   z-index: -2;
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 800;
   font-size: 1.4rem;
   @media screen and (max-width: 760px) {
     font-size: 1rem;

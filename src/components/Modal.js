@@ -61,7 +61,6 @@ const Modal = ({
       ></div>
       <div className="modal__inner" ref={modalContent}>
         <div className="modal__head">
-          {/* <h2>{title}</h2> */}
           {showCloseBtn && (
             <AiOutlineClose
               className="showClose"
