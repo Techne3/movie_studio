@@ -6,6 +6,7 @@ const HamburgerMenu = () => {
   const path = pathname === "/" ? "home" : pathname.substr(1);
 
   const [activeItem, setActiveItem] = useState(path);
+  const [isSelected, setIsSelected] = useState(false);
 
   return (
     <>
@@ -32,6 +33,20 @@ const HamburgerMenu = () => {
             <span className="menu-toggler__line home_toggler"></span>
             <span className="menu-toggler__line home_toggler"></span>
           </label>
+        ) : pathname === "/directors" ? (
+          <label
+            for="menuToggler"
+            id="menuTogglerLabel"
+            className="menu-toggler"
+            role="button"
+            aria-pressed="false"
+            aria-expanded="false"
+            aria-label="Navigation button"
+          >
+            <span className="menu-toggler__line car_toggler "></span>
+            <span className="menu-toggler__line car_toggler "></span>
+            <span className="menu-toggler__line car_toggler "></span>
+          </label>
         ) : (
           <label
             for="menuToggler"
@@ -42,7 +57,7 @@ const HamburgerMenu = () => {
             aria-expanded="false"
             aria-label="Navigation button"
           >
-            <span className="menu-toggler__line "></span>
+            <span className="menu-toggler__line  "></span>
             <span className="menu-toggler__line "></span>
             <span className="menu-toggler__line "></span>
           </label>
@@ -75,7 +90,11 @@ const HamburgerMenu = () => {
               </NavLink>
             </li> */}
             <li>
-              <NavLink to="/directors" className="menu__link">
+              <NavLink
+                to="/directors"
+                className="menu__link"
+                activeStyle={{ color: "#ff331a" }}
+              >
                 Directors
               </NavLink>
             </li>

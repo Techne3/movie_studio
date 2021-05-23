@@ -2,14 +2,16 @@ import React from "react";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
 import "../styles/carousel.scss";
+import "../styles/sidebar.scss";
 
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import sarahCover from "../images/sarah/SarahCover.jpg";
 import maitlandCover from "../images/maitland/MaitlandCover.jpg";
 import danCover from "../images/dan/DanCover.jpg";
+
+import HamburgerMenu from "./HamburgerMenu";
 
 const responsive = {
   desktop: {
@@ -23,7 +25,7 @@ const responsive = {
     paritialVisibilityGutter: 40,
   },
   mobile: {
-    breakpoint: { max: 464, min: 0 },
+    breakpoint: { max: 564, min: 0 },
     items: 1,
     paritialVisibilityGutter: 40,
   },
@@ -83,10 +85,17 @@ const CarouselComp = ({ deviceType, renderButtonGroupOutside }) => {
   return (
     <>
       <div className="logos_container">
-        <Link to="/" className="logos brand" id="Logo">
+        <Link
+          to="/"
+          className="logos brand"
+          id="Logo"
+          style={{ fontSize: "30px" }}
+        >
           Anatomist Films
         </Link>
       </div>
+      <HamburgerMenu />
+
       <div className="my-own-custom-container">
         <Carousel
           // partialVisbile
@@ -98,6 +107,9 @@ const CarouselComp = ({ deviceType, renderButtonGroupOutside }) => {
           dotListClass="custom-dot-list-style"
           customDot={<CustomDot />}
           renderDotsOutside={renderButtonGroupOutside}
+          infinite={true}
+          // autoPlay={deviceType !== "desktop" || "tablet" ? true : false}
+          autoPlaySpeed={4000}
           // transitionDuration={4000}
           // customTransition="all 1"
         >

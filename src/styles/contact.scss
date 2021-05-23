@@ -61,29 +61,35 @@
 }
 
 footer {
-  //   width: 100%;
+  width: 100%;
+  position: relative;
   padding: 50px 100px;
   background: #4f7b87;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+
+  margin-top: 20%;
 }
 
 footer .container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  // justify-content: flex-end;
   align-items: center;
   margin: 5rem 0;
   flex-wrap: wrap;
 }
 
 footer .container .sec {
-  margin-right: 30px;
+  // margin-right: 30px;
 }
 
 footer .container .sec.aboutus {
-  width: 30%;
+  // width: 30%;
   margin-top: 4rem;
   @media screen and (max-width: 760px) {
     width: 100%;
@@ -100,7 +106,7 @@ footer .container h2:before {
   position: absolute;
   bottom: -5px;
   left: 0;
-  width: 50px;
+  width: 100%;
   height: 2px;
   background: #00ffc8;
 }
@@ -160,7 +166,7 @@ footer p {
   margin-bottom: 10px;
 }
 .sec.contact span {
-  margin-left: 1rem;
+  // margin-left: 1rem;
 }
 .sec.contact span a {
   text-decoration: none;

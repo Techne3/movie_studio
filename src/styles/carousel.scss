@@ -9,31 +9,41 @@
 }
 .active_car {
   font-size: 30px;
-  transition: 0.3s ease;
+  transition: 0.4s ease;
   list-style: none;
   text-decoration: none;
   color: #ff331a;
 }
-.active_car:hover {
-  color: #ff331a;
-}
+
+// .active_car_:hover:after {
+//   opacity: 1;
+//   -webkit-transform: scale(1);
+//   transform: scale(1);
+// }
+// .active_car:hover {
+//   color: #ff331a;
+// }
 .inactive_car {
+  font-size: 20px;
   color: #fff;
   list-style: none;
   text-decoration: none;
 }
 
 .names_container {
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
   margin: 2rem;
-  //   top: 0;
-  //   left: 0;
 }
 .btn_container {
   transition: 1s ease;
 }
 
 .my-own-custom-container {
+}
+
+.car_toggler {
+  background: #fff;
+
+  @media screen and (max-width: 760px) {
+    background: #000;
+  }
 }

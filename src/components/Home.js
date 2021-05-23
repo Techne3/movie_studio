@@ -14,7 +14,7 @@ const Home = () => {
       <HamburgerMenu />
       <section className="showcase">
         <header>
-          <h2 className="brand">Anatomist Films</h2>
+          <h2 className="brand_logo">Anatomist Films</h2>
           {/* <div className="toggle">menu</div> */}
         </header>
         <img src={still} alt="video" />
@@ -28,7 +28,7 @@ const Home = () => {
           </p>
 
           <Link to="/directors">
-            <button className="btn_home">Explore</button>
+            <button className="btn_home">Film Makers</button>
           </Link>
         </div>
         {/* <div className="social_links_home">

@@ -43,7 +43,7 @@
   --toggler-line-size: 3px;
   --toggler-offset-right: 1.7rem;
   --toggler-offset-top: 50%;
-  --toggler-color: rgb(17, 16, 16);
+  --toggler-color: rgb(0, 0, 0);
   --toggler-color-hover: #ff331a;
 }
 
@@ -413,3 +413,8 @@ $total: 3;
 //   height: 2%;
 //   border: 10px solid red;
 // }
+
+.car_toggler {
+  background: #fff;
+  color: #fff;
+}

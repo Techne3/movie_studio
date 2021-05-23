@@ -1,0 +1,92 @@
+// section {
+//   //   height: 500vh;
+//   background: red;
+//   position: absolute;
+//   width: 100%;
+//   height: 100vh;
+//   background: url(../images/mts.jpg), linear-gradient(230deg, #f533d4, #2461bb);
+//   background-blend-mode: luminosity;
+//   background-size: cover;
+// }
+
+// section .skewed {
+//   position: absolute;
+//   bottom: -100%;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: #fff;
+//   transform: skewY(-20deg);
+//   transform-origin: top left;
+// }
+
+////////////////////////////////
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+.header_cont {
+  height: 750px;
+  position: relative;
+  width: 100%;
+  background-image: url("../images//mts.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+.header_cont h1 {
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 0.8em;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header_cont img {
+  width: 100%;
+}
+
+.skew_contact {
+  background: #fff;
+  color: #262626;
+  height: 450px;
+  padding-top: 160px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.skew_contact h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-top: 3%;
+}
+
+.skew_contact p {
+  padding: 0 150px;
+  line-height: 1.9;
+}
+
+.skew_contact:before {
+  position: absolute;
+  content: "";
+  width: 78%;
+  height: 200px;
+  top: -87px;
+  left: 0;
+  background: #fff;
+  transform: skewY(10deg);
+}
+.skew_contact:after {
+  position: absolute;
+  content: "";
+  width: 78%;
+  height: 200px;
+  top: -87px;
+  right: 0;
+  background: #fff;
+  transform: skewY(-10deg);
+}

@@ -8,12 +8,14 @@ import About from "./components/About";
 import DirectorsHome from "./components/DirectorHome";
 import Home from "./components/Home";
 import CarouselComp from "./components/CarouselComp";
+import Contacts from "./components/Contacts";
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Route exact path="/" component={Home}></Route>
+        <Route path="/contacts" component={Contacts}></Route>
         {/* <Route path="/directors" component={DirectorsHome}></Route> */}
         <Route path="/daniel" component={Directors}></Route>
         <Route path="/maitland" component={Directors}></Route>
