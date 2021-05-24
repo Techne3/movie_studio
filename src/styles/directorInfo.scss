@@ -21,18 +21,22 @@
     font-family: "Montserrat", sans-serif;
     margin: 0.2rem;
     width: 1008px;
-    height: 430px;
+    height: 330px;
     position: relative;
     cursor: pointer;
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
     overflow: hidden;
+    object-fit: cover;
+
+    @media screen and (max-width: 760px) {
+      width: inherit;
+      height: inherit;
+      object-fit: contain;
+      height: 250px;
+      margin: 0.2rem 0.5rem;
+    }
   }
-  // @media screen and (min-width: 1008px) {
-  //   width: 1750px;
-  //   height: 300px;
-  //   position: relative;
-  // }
 }
 
 // .hover02 figure img {

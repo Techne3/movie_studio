@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import mts from "../images/mts.jpg";
 import "../styles/newContact.scss";
 import { Link } from "react-router-dom";
+import HamburgerMenu from "./HamburgerMenu";
 
 function Contacts() {
   //   const skewImage = () => {
@@ -19,6 +20,7 @@ function Contacts() {
 
   return (
     <>
+      <HamburgerMenu />
       <div className="header_cont">
         <h1>Autonomist Films</h1>
       </div>

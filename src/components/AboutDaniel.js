@@ -18,16 +18,6 @@ const AboutDaniel = () => {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </p>
-      <div className="icon">
-        <ul>
-          <li>
-            <FaLinkedinIn className="social_btn" />
-          </li>
-          <li>
-            <FaVimeoV className="social_btn" />
-          </li>
-        </ul>
-      </div>
     </div>
   );
 };

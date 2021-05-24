@@ -1,13 +1,15 @@
-import JamesBurnt from "../images/dan/JamesBrunt.jpg";
-import AndreaGib from "../images/dan/AndreaGib.jpg";
-import ShortStudy3 from "../images/dan/ShortStudy3.jpg";
-import ShortStudy from "../images/dan/ShortStudy.jpg";
-import Poppet from "../images/dan/Poppet.jpg";
-import Vega from "../images/dan/Vega.jpg";
-import Sanitas from "../images/dan/Sanitas.jpg";
-import Michael from "../images/dan/Michael.jpg";
-import Dymatize from "../images/dan/Dymatize.jpg";
-import Dymatize2 from "../images/dan/Dymatize2.jpg";
+import JamesBurnt from "../images/dan/JamesBrunts.jpg";
+import AndreaGib from "../images/dan/AndreaGibs.jpg";
+import ShortStudy3 from "../images/dan/ShortStudys3.jpg";
+import ShortStudy from "../images/dan/ShortStudys.jpg";
+import Poppet from "../images/dan/GenY.jpg";
+import Vega from "../images/dan/Vegas.jpg";
+import Sanitas from "../images/dan/Sanitass.jpg";
+import Michael from "../images/dan/Michaels.jpg";
+import Dymatize from "../images/dan/Dymantizes.jpg";
+import Dymatize2 from "../images/dan/Dymantizes2.jpg";
+
+/////////// new images
 
 const dan = {
   info: [

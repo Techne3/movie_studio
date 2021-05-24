@@ -25,7 +25,7 @@ const responsive = {
     paritialVisibilityGutter: 40,
   },
   mobile: {
-    breakpoint: { max: 564, min: 0 },
+    breakpoint: { max: 1000, min: 0 },
     items: 1,
     paritialVisibilityGutter: 40,
   },
@@ -67,6 +67,8 @@ const CustomDot = ({ onClick, ...rest }) => {
   // console.log(Object.entries(colors.info).color[index], "here is the info");
 
   let names = obj.info.map((x, index) => x.links)[index];
+
+  console.log(deviceType, "LOOK HERE FOR DEVICE");
   return (
     <div className="names_container">
       <div className="btn_container">
@@ -81,7 +83,7 @@ const CustomDot = ({ onClick, ...rest }) => {
     </div>
   );
 };
-const CarouselComp = ({ deviceType, renderButtonGroupOutside }) => {
+const CarouselComp = ({ deviceType, renderButtonGroupOutside }, props) => {
   return (
     <>
       <div className="logos_container">
@@ -102,14 +104,17 @@ const CarouselComp = ({ deviceType, renderButtonGroupOutside }) => {
           deviceType={deviceType}
           itemClass="image-item"
           responsive={responsive}
-          removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
+          removeArrowOnDeviceType={["desktop", "mobile", "tablet"]}
           showDots={true}
           dotListClass="custom-dot-list-style"
           customDot={<CustomDot />}
           renderDotsOutside={renderButtonGroupOutside}
           infinite={true}
-          // autoPlay={deviceType !== "desktop" || "tablet" ? true : false}
-          autoPlaySpeed={4000}
+          autoPlay={
+            deviceType !== "desktop" || deviceType !== "tablet" ? false : true
+          }
+          // autoPlay={["mobile"]}
+          // autoPlaySpeed={3000}
           // transitionDuration={4000}
           // customTransition="all 1"
         >

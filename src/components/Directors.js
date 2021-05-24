@@ -79,7 +79,7 @@ const Directors = () => {
       <div className={isOpen ? "modal" : "header_wrapper"}>
         <div className={border} id="header_wrapper">
           <div className="directors_name_container">
-            <p>Directors </p>
+            <p>Director </p>
 
             <p className="dir_name">
               {" "}
@@ -140,12 +140,20 @@ const Directors = () => {
                         title: x.name,
                       })
                     }
+                    style={{
+                      backgroundImage: `url(${x.image})`,
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                      backgroundSize: "cover",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
                   >
                     <div className="video_name">
                       <h2>{x.name}</h2>
                     </div>
 
-                    <img src={x.image} alt="video" />
+                    {/* <img src={x.image} alt="video" /> */}
                     <div className="post-s">
                       <h4>{x.director}</h4>
                       <div className="post-info"></div>
@@ -165,12 +173,20 @@ const Directors = () => {
                         title: x.name,
                       })
                     }
+                    style={{
+                      backgroundImage: `url(${x.image})`,
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                      backgroundSize: "cover",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
                   >
                     <div className="video_name">
                       <h2>{x.name}</h2>
                     </div>
 
-                    <img src={x.image} alt="video" />
+                    {/* <img src={x.image} alt="video" /> */}
                     <div className="post-s">
                       <h4>{x.director}</h4>
                       <div className="post-info"></div>
@@ -189,12 +205,20 @@ const Directors = () => {
                         title: x.name,
                       })
                     }
+                    style={{
+                      backgroundImage: `url(${x.image})`,
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                      backgroundSize: "cover",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
                   >
                     <div className="video_name">
                       <h2>{x.name}</h2>
                     </div>
 
-                    <img src={x.image} alt="video" />
+                    {/* <img src={x.image} alt="video" /> */}
                     <div className="post-s">
                       <h4>{x.director}</h4>
                       <div className="post-info"></div>

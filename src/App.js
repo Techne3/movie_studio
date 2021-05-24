@@ -15,12 +15,12 @@ function App() {
     <Router>
       <div className="App">
         <Route exact path="/" component={Home}></Route>
-        <Route path="/contacts" component={Contacts}></Route>
+        <Route path="/contact" component={Contacts}></Route>
         {/* <Route path="/directors" component={DirectorsHome}></Route> */}
         <Route path="/daniel" component={Directors}></Route>
         <Route path="/maitland" component={Directors}></Route>
         <Route path="/sarah" component={Directors}></Route>
-        <Route path="/contact" component={Contact}></Route>
+        {/* <Route path="/contact" component={Contact}></Route> */}
         <Route path="/about" component={About}></Route>
         <Route path="/directors" component={CarouselComp}></Route>
       </div>
