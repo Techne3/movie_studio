@@ -24,7 +24,7 @@ const Modal = ({
     modalContent.current.style.transitionDuration = duration + "ms";
 
     setTimeout(() => {
-      modalBg.current.style.opacity = 0.98;
+      modalBg.current.style.opacity = 1;
       modalContent.current.style.opacity = 1;
       modalContent.current.style.top = 0;
     }, 20);

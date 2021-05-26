@@ -156,6 +156,7 @@ const Directors = () => {
                     {/* <img src={x.image} alt="video" /> */}
                     <div className="post-s">
                       <h4>{x.director}</h4>
+
                       <div className="post-info"></div>
                     </div>
                   </div>

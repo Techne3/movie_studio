@@ -109,6 +109,7 @@ const CarouselComp = ({ deviceType, renderButtonGroupOutside }, props) => {
           dotListClass="custom-dot-list-style"
           customDot={<CustomDot />}
           renderDotsOutside={renderButtonGroupOutside}
+          removeArrowOnDeviceType={["tablet", "mobile"]}
           infinite={true}
           autoPlay={
             deviceType !== "desktop" || deviceType !== "tablet" ? false : true
@@ -129,10 +130,16 @@ const CarouselComp = ({ deviceType, renderButtonGroupOutside }, props) => {
                     backgroundSize: "cover",
                     justifyContent: "center",
                     alignItems: "center",
-                    height: "100vh",
+                    height: "80vh",
+                    // width: "80%",
+                    // display: "flex",
+                    // justifyContent: "center",
+                    // alignItems: "center",
+                    margin: "5rem",
                   }}
-                >
-                  hello
+                ></div>
+                <div className="name_container">
+                  <p>{images.names}</p>
                 </div>
               </>
             );
