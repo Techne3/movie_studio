@@ -68,7 +68,7 @@ const CustomDot = ({ onClick, ...rest }) => {
 
   let names = obj.info.map((x, index) => x.links)[index];
 
-  console.log(deviceType, "LOOK HERE FOR DEVICE");
+  // console.log(deviceType, "LOOK HERE FOR DEVICE");
   return (
     <div className="names_container">
       <div className="btn_container">
@@ -101,10 +101,11 @@ const CarouselComp = ({ deviceType, renderButtonGroupOutside }, props) => {
       <div className="my-own-custom-container">
         <Carousel
           // partialVisbile
+          swipeable={true}
           deviceType={deviceType}
           itemClass="image-item"
           responsive={responsive}
-          removeArrowOnDeviceType={["desktop", "mobile", "tablet"]}
+          removeArrowOnDeviceType={["desktop"]}
           showDots={true}
           dotListClass="custom-dot-list-style"
           customDot={<CustomDot />}
@@ -117,24 +118,32 @@ const CarouselComp = ({ deviceType, renderButtonGroupOutside }, props) => {
           // customTransition="all 1"
         >
           {obj.info.map((images) => {
+            console.log(images.links, "here are the links");
             return (
               <>
-                <div
-                  style={{
-                    backgroundImage: `url(${images.img})`,
-                    backgroundRepeat: "no-repeat",
-                    backgroundPosition: "center",
-                    backgroundSize: "cover",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    height: "70vh",
+                <div className="images_container">
+                  <Link to={`${images.links}`}>
+                    <div
+                      style={{
+                        backgroundImage: `url(${images.img})`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center",
+                        backgroundSize: "cover",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        height: "70vh",
+                        cursor: "pointer",
 
-                    // display: "flex",
-                    // justifyContent: "center",
-                    // alignItems: "center",
-                    margin: "10rem 4rem",
-                  }}
-                ></div>
+                        // display: "flex",
+                        // justifyContent: "center",
+                        // alignItems: "center",
+                        margin: "10rem 3rem",
+                        zIndex: "3",
+                      }}
+                    ></div>
+                  </Link>
+                </div>
+
                 <div className="name_container">
                   <p>{images.names}</p>
                 </div>
