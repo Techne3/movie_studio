@@ -96,7 +96,7 @@ const CarouselComp = ({ deviceType, renderButtonGroupOutside }, props) => {
           Anatomist Films
         </Link>
       </div>
-      <HamburgerMenu />
+      <HamburgerMenu style={{ zIndex: "100000000", background: "#000" }} />
 
       <div className="my-own-custom-container">
         <Carousel
@@ -109,13 +109,10 @@ const CarouselComp = ({ deviceType, renderButtonGroupOutside }, props) => {
           dotListClass="custom-dot-list-style"
           customDot={<CustomDot />}
           renderDotsOutside={renderButtonGroupOutside}
-          removeArrowOnDeviceType={["tablet", "mobile"]}
           infinite={true}
-          autoPlay={
-            deviceType !== "desktop" || deviceType !== "tablet" ? false : true
-          }
+          // autoPlay={true}
           // autoPlay={["mobile"]}
-          // autoPlaySpeed={3000}
+          autoPlaySpeed={4000}
           // transitionDuration={4000}
           // customTransition="all 1"
         >
@@ -130,12 +127,12 @@ const CarouselComp = ({ deviceType, renderButtonGroupOutside }, props) => {
                     backgroundSize: "cover",
                     justifyContent: "center",
                     alignItems: "center",
-                    height: "80vh",
-                    // width: "80%",
+                    height: "70vh",
+
                     // display: "flex",
                     // justifyContent: "center",
                     // alignItems: "center",
-                    margin: "5rem",
+                    margin: "10rem 4rem",
                   }}
                 ></div>
                 <div className="name_container">
