@@ -12,6 +12,16 @@ const Modal = ({
   duration = 300,
   showCloseBtn,
   credits,
+  producer,
+  director,
+  written,
+  cinematography,
+  edited,
+  staring,
+  music,
+  audio,
+  animation,
+  other,
 }) => {
   const modal = useRef();
   const modalBg = useRef();
@@ -71,7 +81,17 @@ const Modal = ({
         <div className="modal__body">{children}</div>
         <div className="modal__foot">
           <h3>{title}</h3>
-          <p>{credits}</p>
+          {producer && <p>Producer: {producer}</p>}
+          {director && <p>Director: {director}</p>}
+          {written && <p>Written By:{written}</p>}
+          {cinematography && <p>Cinematography:{cinematography}</p>}
+          {edited && <p>Edited: {edited}</p>}
+          {staring && <p>Staring: {staring}</p>}
+          {music && <p>Music: {music}</p>}
+          {audio && <p>Audio: {audio}</p>}
+          {animation && <p>Animation: {animation}</p>}
+          {other && <p>Other: {other}</p>}
+
           {/* <button onClick={(e) => modalCloseHandler(e)}>Close</button> */}
         </div>
       </div>

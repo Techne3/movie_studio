@@ -22,6 +22,16 @@ const Directors = () => {
   // const [videoTitle, setVideoTitle] = useState(null);
 
   const [isOpen, setOpen] = useState(false);
+  const [producer, setProducer] = useState("");
+  const [director, setDirector] = useState("");
+  const [written, setWritten] = useState("");
+  const [cinematography, setCinematography] = useState("");
+  const [edited, setEdited] = useState("");
+  const [staring, setStaring] = useState("");
+  const [music, setMusic] = useState("");
+  const [audio, setAudio] = useState("");
+  const [animation, setAnimation] = useState("");
+  const [other, setOther] = useState("");
 
   const [videoInfo, setVideoInfo] = useState([
     {
@@ -62,6 +72,28 @@ const Directors = () => {
   };
 
   useEffect(() => {
+    let creditList = () => {
+      if (videoInfo.credits) {
+        videoInfo.credits.map((x) => {
+          setProducer(x.produced);
+          setDirector(x.director);
+          setWritten(x.written);
+          setCinematography(x.cinematography);
+          setEdited(x.edited);
+          setStaring(x.staring);
+          setMusic(x.music);
+          setAudio(x.audio);
+          setAnimation(x.animation);
+          setOther(x.other);
+        });
+      }
+    };
+    creditList();
+  }, [producer, director, written, videoInfo.credits]);
+
+  console.log(director, "hereerer");
+
+  useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
 
     return () => window.removeEventListener("scroll", listenScrollEvent);
@@ -95,38 +127,7 @@ const Directors = () => {
           </Link>
         </div>
         <HamburgerMenu />
-        {videoInfo.video && (
-          <>
-            {/* <div
-              className="videoPlayerWrapper"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                marginTop: "4rem",
-              }}
-            >
-              <iframe
-                title="casts"
-                src={videoInfo.video}
-                style={{
-                  // position: "absolute",
-                  // top: "0",
-                  // left: "0",
-                  width: "90%",
-                  height: "100%",
-                }}
-                frameborder="0"
-                allow="autoplay; fullscreen;"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div className="credit_wrapper">
-              <h3>{videoInfo.title}</h3>
-              <p>{videoInfo.credits}</p>
-            </div> */}
-          </>
-        )}
+        {videoInfo.video && <></>}
         <div className="director_wrapper">
           {activeItem === "daniel"
             ? dan.info.map((x) => (
@@ -255,8 +256,18 @@ const Directors = () => {
               duration={500}
               onClose={() => setIsModalOpened(false)}
               showCloseBtn
-              credits={videoInfo.credits}
               title={videoInfo.title}
+              credits={producer}
+              producer={producer}
+              director={director}
+              written={written}
+              cinematography={cinematography}
+              edited={edited}
+              staring={staring}
+              music={music}
+              audio={audio}
+              animation={animation}
+              other={other}
             >
               <iframe
                 title="casts"
