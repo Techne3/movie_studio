@@ -93,10 +93,10 @@ const CarouselComp = ({ deviceType, renderButtonGroupOutside }, props) => {
           id="Logo"
           style={{ fontSize: "30px" }}
         >
-          Anatomist Films
+          Autonomist Films
         </Link>
       </div>
-      <HamburgerMenu style={{ zIndex: "100000000", background: "#000" }} />
+      <HamburgerMenu />
 
       <div className="my-own-custom-container">
         <Carousel
@@ -122,6 +122,9 @@ const CarouselComp = ({ deviceType, renderButtonGroupOutside }, props) => {
             return (
               <>
                 <div className="images_container">
+                  <div className="name_info_container">
+                    <p>{images.names}</p>
+                  </div>
                   <Link to={`${images.links}`}>
                     <div
                       style={{
@@ -131,21 +134,17 @@ const CarouselComp = ({ deviceType, renderButtonGroupOutside }, props) => {
                         backgroundSize: "cover",
                         justifyContent: "center",
                         alignItems: "center",
-                        height: "70vh",
+                        height: "73vh",
                         cursor: "pointer",
 
                         // display: "flex",
                         // justifyContent: "center",
                         // alignItems: "center",
-                        margin: "10rem 3rem",
+                        margin: "5rem 3.5rem",
                         zIndex: "3",
                       }}
                     ></div>
                   </Link>
-                </div>
-
-                <div className="name_container">
-                  <p>{images.names}</p>
                 </div>
               </>
             );

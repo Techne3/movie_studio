@@ -74,22 +74,22 @@ const Directors = () => {
   useEffect(() => {
     let creditList = () => {
       if (videoInfo.credits) {
-        videoInfo.credits.map((x) => {
-          setProducer(x.produced);
-          setDirector(x.director);
-          setWritten(x.written);
-          setCinematography(x.cinematography);
-          setEdited(x.edited);
-          setStaring(x.staring);
-          setMusic(x.music);
-          setAudio(x.audio);
-          setAnimation(x.animation);
-          setOther(x.other);
+        videoInfo.credits.map((creds) => {
+          setProducer(creds.produced);
+          setDirector(creds.director);
+          setWritten(creds.written);
+          setCinematography(creds.cinematography);
+          setEdited(creds.edited);
+          setStaring(creds.staring);
+          setMusic(creds.music);
+          setAudio(creds.audio);
+          setAnimation(creds.animation);
+          setOther(creds.other);
         });
       }
     };
     creditList();
-  }, [producer, director, written, videoInfo.credits]);
+  }, [videoInfo.credits]);
 
   console.log(director, "hereerer");
 
