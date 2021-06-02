@@ -8,16 +8,21 @@ const HamburgerMenu = () => {
   const [activeItem, setActiveItem] = useState(path);
   const [isSelected, setIsSelected] = useState(false);
 
+  const handleItemClick = (e) => {
+    setIsSelected(!isSelected);
+  };
+
   return (
     <>
       <div className="wrapper">
         <input
-          // onClick={setIsMenuActive(!isMenuActive)}
           type="checkbox"
           id="menuToggler"
           className="input-toggler"
           value="1"
-          autofocus="true"
+          autofocus={true}
+          onClick={() => handleItemClick()}
+          checked={isSelected}
         />
         {pathname === "/" ? (
           <label
@@ -80,22 +85,19 @@ const HamburgerMenu = () => {
                 to="/contact"
                 className="menu__link"
                 activeStyle={{ color: "#ff331a" }}
+                onClick={() => handleItemClick()}
               >
                 Contact
               </NavLink>
             </li>
-            {/* <li>
-              <NavLink to="/about" className="menu__link">
-                About
-              </NavLink>
-            </li> */}
             <li>
               <NavLink
                 to="/directors"
                 className="menu__link"
                 activeStyle={{ color: "#ff331a" }}
+                onClick={() => handleItemClick()}
               >
-                Directors
+                Filmmakers
               </NavLink>
             </li>
           </ul>

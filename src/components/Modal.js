@@ -84,7 +84,7 @@ const Modal = ({
           {producer && <p>Producer: {producer}</p>}
           {director && <p>Director: {director}</p>}
           {written && <p>Written By: {written}</p>}
-          {cinematography && <p>Cinematography:{cinematography}</p>}
+          {cinematography && <p>Cinematography: {cinematography}</p>}
           {edited && <p>Edited: {edited}</p>}
           {staring && <p>Staring: {staring}</p>}
           {music && <p>Music: {music}</p>}
