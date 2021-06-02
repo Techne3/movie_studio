@@ -30,7 +30,6 @@ const responsive = {
     paritialVisibilityGutter: 40,
   },
 };
-// const colors = ["red", "green", "blue", "orange"];
 
 const obj = {
   info: [
@@ -63,12 +62,9 @@ const CustomDot = ({ onClick, ...rest }) => {
   } = rest;
   // const carouselItems = [CarouselItem1, CaourselItem2, CarouselItem3];
   // onMove means if dragging or swiping in progress.
-  // active is provided by this lib for checking if the item is active or not.
-  // console.log(Object.entries(colors.info).color[index], "here is the info");
 
   let names = obj.info.map((x, index) => x.links)[index];
 
-  // console.log(deviceType, "LOOK HERE FOR DEVICE");
   return (
     <div className="names_container">
       <div className="btn_container">
@@ -136,10 +132,6 @@ const CarouselComp = ({ deviceType, renderButtonGroupOutside }, props) => {
                         alignItems: "center",
                         height: "73vh",
                         cursor: "pointer",
-
-                        // display: "flex",
-                        // justifyContent: "center",
-                        // alignItems: "center",
                         margin: "5rem 3.5rem",
                         zIndex: "3",
                       }}

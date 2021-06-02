@@ -17,10 +17,6 @@ import AboutMaitland from "./AboutMaitland";
 import AboutDaniel from "./AboutDaniel";
 
 const Directors = () => {
-  // const [videoPlayer, setVideoPlayer] = useState(null);
-  // const [videoCredit, setVideoCredit] = useState(null);
-  // const [videoTitle, setVideoTitle] = useState(null);
-
   const [isOpen, setOpen] = useState(false);
   const [producer, setProducer] = useState("");
   const [director, setDirector] = useState("");
@@ -154,7 +150,6 @@ const Directors = () => {
                       <h2>{x.name}</h2>
                     </div>
 
-                    {/* <img src={x.image} alt="video" /> */}
                     <div className="post-s">
                       <h4>{x.director}</h4>
 
@@ -187,8 +182,6 @@ const Directors = () => {
                     <div className="video_name">
                       <h2>{x.name}</h2>
                     </div>
-
-                    {/* <img src={x.image} alt="video" /> */}
                     <div className="post-s">
                       <h4>{x.director}</h4>
                       <div className="post-info"></div>
