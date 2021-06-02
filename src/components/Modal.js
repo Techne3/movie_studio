@@ -81,16 +81,67 @@ const Modal = ({
         <div className="modal__body">{children}</div>
         <div className="modal__foot">
           <h3>{title}</h3>
-          {producer && <p>Producer: {producer}</p>}
-          {director && <p>Director: {director}</p>}
-          {written && <p>Written By: {written}</p>}
-          {cinematography && <p>Cinematography: {cinematography}</p>}
-          {edited && <p>Edited: {edited}</p>}
-          {staring && <p>Staring: {staring}</p>}
-          {music && <p>Music: {music}</p>}
-          {audio && <p>Audio: {audio}</p>}
-          {animation && <p>Animation: {animation}</p>}
-          {other && <p>Other: {other}</p>}
+
+          <span></span>
+          {producer && (
+            <p>
+              <span>Producer: </span> {producer}
+            </p>
+          )}
+          {director && (
+            <p>
+              <span>Director: </span>
+              {director}
+            </p>
+          )}
+          {written && (
+            <p>
+              <span>Written By: </span>
+              {written}
+            </p>
+          )}
+          {cinematography && (
+            <p>
+              <span>Cinematography: </span>
+              {cinematography}
+            </p>
+          )}
+          {edited && (
+            <p>
+              <span>Edited: </span>
+              {edited}
+            </p>
+          )}
+          {staring && (
+            <p>
+              <span>Staring: </span>
+              {staring}
+            </p>
+          )}
+          {music && (
+            <p>
+              <span>Music: </span>
+              {music}
+            </p>
+          )}
+          {audio && (
+            <p>
+              <span>Audio: </span>
+              {audio}
+            </p>
+          )}
+          {animation && (
+            <p>
+              <span>Animation: </span>
+              {animation}
+            </p>
+          )}
+          {other && (
+            <p>
+              <span>Other: </span>
+              {other}
+            </p>
+          )}
 
           {/* <button onClick={(e) => modalCloseHandler(e)}>Close</button> */}
         </div>

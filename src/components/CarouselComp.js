@@ -114,7 +114,6 @@ const CarouselComp = ({ deviceType, renderButtonGroupOutside }, props) => {
           // customTransition="all 1"
         >
           {obj.info.map((images) => {
-            console.log(images.links, "here are the links");
             return (
               <>
                 <div className="images_container">
@@ -123,7 +122,9 @@ const CarouselComp = ({ deviceType, renderButtonGroupOutside }, props) => {
                   </div>
                   <Link to={`${images.links}`}>
                     <div
+                      className="image_links"
                       style={{
+                        display: "flex",
                         backgroundImage: `url(${images.img})`,
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "center",
@@ -132,7 +133,7 @@ const CarouselComp = ({ deviceType, renderButtonGroupOutside }, props) => {
                         alignItems: "center",
                         height: "73vh",
                         cursor: "pointer",
-                        margin: "5rem 3.5rem",
+                        margin: "5rem 4rem",
                         zIndex: "3",
                       }}
                     ></div>

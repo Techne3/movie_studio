@@ -114,15 +114,19 @@
 
 .modal__foot p {
   color: #d1cfcf;
-  font-size: 12px;
+  font-size: 13px;
 
   @media screen and (max-width: 760px) {
-    font-size: 10px;
+    font-size: 13px;
   }
 }
-.modal__foot h3 {
+.modal__foot p span {
+  font-weight: bold;
   color: #d1cfcf;
-  font-size: 13px;
+}
+.modal__foot h3 {
+  color: #fff;
+  font-size: 17px;
   @media screen and (max-width: 760px) {
     margin-top: -15%;
   }

@@ -29,7 +29,7 @@
   text-decoration: none;
   color: #ff331a;
   font-weight: 100;
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 960px) {
     font-size: 1.3rem;
   }
 }
@@ -49,7 +49,7 @@
   text-decoration: none;
   z-index: 9999999;
   font-weight: 100;
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 960px) {
     font-size: 1.3rem;
   }
 }
@@ -59,9 +59,21 @@
 }
 .name_info_container {
   position: fixed;
-  margin: 2rem 5rem;
+  margin: 3rem 6rem;
   color: #d1cfcf;
+  @media screen and (max-width: 960px) {
+    margin: 2rem 2rem;
+  }
 }
 .btn_container {
   transition: 1s ease;
+}
+.image_links {
+  @media screen and (max-width: 960px) {
+    margin: 8rem 0 !important;
+  }
+}
+.images_container {
+  margin-top: 5rem;
+  min-height: 80vh;
 }
