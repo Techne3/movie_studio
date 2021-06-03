@@ -24,7 +24,7 @@ const HamburgerMenu = () => {
           onClick={() => handleItemClick()}
           checked={isSelected}
         />
-        {pathname === "/" ? (
+        {pathname === "/" || pathname === "/contact" ? (
           <label
             for="menuToggler"
             id="menuTogglerLabel"

@@ -12,7 +12,7 @@
   --toggler-line-size: 3px;
   --toggler-offset-right: 1.7rem;
   --toggler-offset-top: 50%;
-  --toggler-color: rgb(0, 0, 0);
+  --toggler-color: #4e4d4d;
   --toggler-color-hover: #ff331a;
 }
 
@@ -120,8 +120,8 @@ $total: 3;
 //   // }
 // }
 .menu__link {
-  color: #000;
-  font-weight: 100;
+  color: #4e4d4d;
+  font-weight: 300;
   text-decoration: none;
   font-size: 1.6rem;
   line-height: 15vmin;
@@ -353,7 +353,7 @@ $total: 3;
 .logos_home {
   margin-right: 2rem;
   text-decoration: none;
-  color: #000;
+  color: #4e4d4d;
   z-index: 9;
 }
 

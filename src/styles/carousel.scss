@@ -27,8 +27,9 @@
   transition: 0.4s ease;
   list-style: none;
   text-decoration: none;
-  color: #ff331a;
-  font-weight: 100;
+  color: #ffc27c;
+  font-weight: 500;
+  letter-spacing: 0.7px;
   @media screen and (max-width: 960px) {
     font-size: 1.3rem;
   }
@@ -44,11 +45,12 @@
 // }
 .inactive_car {
   font-size: 2rem;
-  color: #000;
+  color: #4e4d4d;
   list-style: none;
   text-decoration: none;
   z-index: 9999999;
-  font-weight: 100;
+  font-weight: 500;
+  letter-spacing: 0.7px;
   @media screen and (max-width: 960px) {
     font-size: 1.3rem;
   }
@@ -70,7 +72,7 @@
 }
 .image_links {
   @media screen and (max-width: 960px) {
-    margin: 8rem 0 !important;
+    margin: 7rem 0 !important;
   }
 }
 .images_container {

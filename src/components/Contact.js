@@ -46,10 +46,15 @@ const Contact = () => {
       </div> */}
       <HamburgerMenu />
       <div className="contact_wrapper">
+        <div className="logo_contact">
+          <p>Contact</p>
+          <h1>Autonomist Films</h1>
+        </div>
         <div className="contact_info_container">
           <div className="contact_info">
             <h1>Autonomist Films Team</h1>
             <div className="data">
+              <h4>Contact Us</h4>
               <p>Lorem ipsum dolor sit amet.</p>
               <p>Lorem ipsum dolor sit amet.</p>
               <p>Lorem ipsum dolor sit amet.</p>
@@ -72,7 +77,7 @@ const Contact = () => {
           ></div>
         </div>
         <footer>
-          <div className="copyright">© all rights reserved Anatomist Films</div>
+          <div className="copyright">© copyright Brikolage Lab</div>
         </footer>
       </div>
     </>

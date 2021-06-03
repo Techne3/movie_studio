@@ -73,7 +73,7 @@
   clip-path: polygon(0 0, 100% 0, 0 100%, 0% 100%);
   width: 0px;
   height: 350px;
-  background: rgba(50, 49, 51, 0.68);
+  background: rgba(0, 0, 0, 0.342);
   position: absolute;
   top: 0;
   display: flex;
@@ -175,7 +175,7 @@
   transition: 0.4s;
   @media screen and (max-width: 760px) {
     position: absolute;
-    top: 1rem;
+    top: 1.5rem;
     left: 20px;
     font-size: 1.4rem;
   }

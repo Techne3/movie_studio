@@ -1,3 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+.logo_contact {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.logo_contact p {
+  color: #d1cfcf;
+  margin: 1rem;
+  font-size: 1.4em;
+}
+.logo_contact h1 {
+  color: #d1cfcf;
+  margin: 1rem;
+  font-size: 2.3em;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+.data h4 {
+  line-height: 1.5em;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.data p {
+  line-height: 1.5em;
+  font-weight: 200;
+}
+
 .contact_wrapper {
   min-height: 100vh;
   background: #815c33;
@@ -15,7 +45,7 @@
 }
 
 .contact_info {
-  height: 600px;
+  height: 300px;
 }
 
 .topImgContainer {

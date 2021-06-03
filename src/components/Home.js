@@ -14,13 +14,13 @@ const Home = () => {
       <HamburgerMenu />
       <section className="showcase">
         <header>
-          <h2 className="brand_logo">Anatomist Films</h2>
+          <h2 className="brand_logo">Autonomist Films</h2>
           {/* <div className="toggle">menu</div> */}
         </header>
         <img src={still} alt="video" />
         <div className="overlay"></div>
         <div className="text">
-          <h2 className="brand">Anatomist Films</h2>
+          <h2 className="brand">Autonomist Films</h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error a
             ratione quod cupiditate aperiam ea mollitia animi ad reiciendis!
@@ -28,7 +28,7 @@ const Home = () => {
           </p>
 
           <Link to="/directors">
-            <button className="btn_home">Film Makers</button>
+            <button className="btn_home">Filmmakers</button>
           </Link>
         </div>
         {/* <div className="social_links_home">

@@ -87,8 +87,6 @@ const Directors = () => {
     creditList();
   }, [videoInfo.credits]);
 
-  console.log(director, "hereerer");
-
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
 
@@ -107,7 +105,7 @@ const Directors = () => {
       <div className={isOpen ? "modal" : "header_wrapper"}>
         <div className={border} id="header_wrapper">
           <div className="directors_name_container">
-            <p>Director </p>
+            <p>Filmmaker </p>
 
             <p className="dir_name">
               {" "}
