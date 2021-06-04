@@ -87,7 +87,7 @@ const HamburgerMenu = () => {
                 activeStyle={{ color: "#ff331a" }}
                 onClick={() => handleItemClick()}
               >
-                Contact
+                CONTACT
               </NavLink>
             </li>
             <li>
@@ -97,7 +97,7 @@ const HamburgerMenu = () => {
                 activeStyle={{ color: "#ff331a" }}
                 onClick={() => handleItemClick()}
               >
-                Filmmakers
+                FILMMAKERS
               </NavLink>
             </li>
           </ul>

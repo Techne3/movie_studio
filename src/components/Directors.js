@@ -105,19 +105,30 @@ const Directors = () => {
       <div className={isOpen ? "modal" : "header_wrapper"}>
         <div className={border} id="header_wrapper">
           <div className="directors_name_container">
-            <p>Filmmaker </p>
+            {/* <p>Filmmaker </p> */}
 
             <p className="dir_name">
               {" "}
-              {activeItem === "daniel"
-                ? "Daniel Sharkey"
-                : activeItem === "maitland"
-                ? "Maitland Lottimer"
-                : "Sarah Megysey"}
+              {activeItem === "daniel" ? (
+                <>
+                  <p className="dir_title">DANIEL SHARKEY </p>
+                  <p>Cinematographer • Director • Editor </p>
+                </>
+              ) : activeItem === "maitland" ? (
+                <>
+                  <p className="dir_title">MAITLAND LOTTIMER </p>
+                  <p>Director • Editor • Composer </p>
+                </>
+              ) : (
+                <>
+                  <p className="dir_title">SARAH MEGYSEY </p>
+                  <p>Cinematographer • Director • Editor </p>
+                </>
+              )}
             </p>
           </div>
           <Link to="/" className={header} id="logo">
-            Anatomist Films
+            Autonomist Films
           </Link>
         </div>
         <HamburgerMenu />

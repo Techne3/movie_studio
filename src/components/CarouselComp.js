@@ -87,7 +87,7 @@ const CarouselComp = ({ deviceType, renderButtonGroupOutside }, props) => {
           to="/"
           className="logos brand"
           id="Logo"
-          style={{ fontSize: "30px" }}
+          style={{ fontSize: "30px", letterSpacing: "2px" }}
         >
           Autonomist Films
         </Link>
