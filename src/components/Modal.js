@@ -114,7 +114,7 @@ const Modal = ({
           )}
           {staring && (
             <p>
-              <span>Staring: </span>
+              <span>Starring: </span>
               {staring}
             </p>
           )}

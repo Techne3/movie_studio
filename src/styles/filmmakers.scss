@@ -1,0 +1,44 @@
+.filmmakers_images_wrap {
+  height: 350px;
+  width: 90%;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
+  object-fit: cover;
+  margin: 0.4rem;
+
+  @media screen and (max-width: 760px) {
+    width: 100%;
+    height: 350px;
+    margin: 0.2rem;
+  }
+}
+.filmmakers_image {
+  margin-top: 5rem;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  //   object-fit: cover;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-size: cover;
+  background-color: #fff;
+
+  @media screen and (max-width: 760px) {
+    width: inherit;
+    height: inherit;
+    object-fit: contain;
+    height: 250px;
+    // margin: 0.2rem 0.5rem;
+  }
+}
+.filmmakers_container {
+  object-fit: cover;
+  //   width: 1300px;
+  height: 350px;
+  overflow: hidden;
+  @media screen and (max-width: 760px) {
+    // width: 100%;
+    margin: 0.5rem;
+  }
+}
