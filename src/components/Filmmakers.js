@@ -38,6 +38,26 @@ const Filmmakers = () => {
                 alignItems: "center",
                 height: "100%",
               }}
+            >
+              <div className="img_overlay">
+                <h1>Hello</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="filmmakers_container">
+          <div className="filmmakers_images_wrap">
+            <div
+              className="filmmakers_image"
+              style={{
+                backgroundImage: `url(${sarahCover})`,
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "100%",
+              }}
             ></div>
           </div>
         </div>
