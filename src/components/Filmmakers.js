@@ -8,6 +8,25 @@ import maitlandCover from "../images/maitland/MaitlandCover.jpg";
 import danCover from "../images/dan/DanCover.jpg";
 
 import "../styles/filmmakers.scss";
+const obj_film = {
+  info: [
+    {
+      names: "Maitland Lottimer",
+      links: "/maitland",
+      img: `${maitlandCover}`,
+    },
+    {
+      names: "Sarah Megysey",
+      links: "/sarah",
+      img: `${sarahCover}`,
+    },
+    {
+      names: "Daniel Sharkey",
+      links: "/daniel",
+      img: `${danCover}`,
+    },
+  ],
+};
 
 const Filmmakers = () => {
   return (
@@ -25,58 +44,28 @@ const Filmmakers = () => {
       <HamburgerMenu />
 
       <div className="filmmakers_wrapper">
-        <div className="filmmakers_container">
-          <div className="filmmakers_images_wrap">
-            <div
-              className="filmmakers_image"
-              style={{
-                backgroundImage: `url(${sarahCover})`,
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "100%",
-              }}
-            >
-              <div className="img_overlay">
-                <h1>Hello</h1>
+        {obj_film.info.map((directors) => (
+          <Link className="links" to={directors.links}>
+            <div className="filmmakers_container radio-btns" role="radiogroup">
+              <div className="filmmakers_images_wrap">
+                <div
+                  className="filmmakers_image"
+                  style={{
+                    backgroundImage: `url(${directors.img})`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center",
+                    backgroundSize: "cover",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    height: "100%",
+                  }}
+                >
+                  <div className="img_overlay">{directors.names}</div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="filmmakers_container">
-          <div className="filmmakers_images_wrap">
-            <div
-              className="filmmakers_image"
-              style={{
-                backgroundImage: `url(${sarahCover})`,
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "100%",
-              }}
-            ></div>
-          </div>
-        </div>
-        <div className="filmmakers_container">
-          <div className="filmmakers_images_wrap">
-            <div
-              className="filmmakers_image"
-              style={{
-                backgroundImage: `url(${sarahCover})`,
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "100%",
-              }}
-            ></div>
-          </div>
-        </div>
+          </Link>
+        ))}
       </div>
     </>
   );
