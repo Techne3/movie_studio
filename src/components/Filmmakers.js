@@ -40,6 +40,7 @@ const Filmmakers = () => {
         >
           Autonomist Films
         </Link>
+        <p className="filmmakers_title">FILMMAKERS</p>
       </div>
       <HamburgerMenu />
 

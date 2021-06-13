@@ -10,15 +10,70 @@
 // .video_home {
 //   height: 100vh;
 // }
+
+// .embed-container {
+//   position: relative;
+//   padding-bottom: 56.25%;
+//   height: 0;
+//   overflow: hidden;
+//   max-width: 100%;
+//   height: auto;
+// }
+// .embed-container iframe,
+// .embed-container object,
+// .embed-container embed {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+
+//   @media screen and (max-width: 760px) {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     padding: 0;
+//   }
+// }
+
 .video_wrapper {
   overflow: hidden;
 }
 .video_players {
-  @media screen and (max-width: 760px) {
-    width: 200% !important;
-    overflow: hidden;
+  @media screen and (max-width: 1200px) {
+    visibility: hidden;
+    // height: 300vh;
+    // padding-bottom: 0;
+    // position: absolute;
+    // width: 300% !important;
+    // height: 100vh;
+    // overflow: hidden;
+    // top: -300px;
   }
 }
+.embed-container {
+  @media screen and (max-width: 1200px) {
+    top: -300px;
+  }
+}
+
+.starting_img {
+  z-index: -1;
+  @media screen and (min-width: 1200px) {
+    // visibility: hidden;
+    z-index: -1;
+  }
+}
+.starting_img_none {
+  visibility: hidden;
+}
+.mobile_img {
+  visibility: hidden;
+  @media screen and (max-width: 1200px) {
+    visibility: visible;
+  }
+}
+
 .btn_home {
   position: relative;
   color: #fff;
@@ -70,19 +125,22 @@
 // }
 
 .showcase {
-  overflow: hidden;
-  position: absolute;
+  // overflow: hidden;
+  position: fixed;
   right: 0;
+  top: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding: 100px;
   display: flex;
   // flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #815c33;
+  // background: url("../images/band.jpg");
+  // background: transparent;
   color: #fff;
-  z-index: 2;
+  z-index: 0;
 }
 
 .showcase header {

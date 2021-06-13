@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import still from "../images/mainHome.jpg";
 import { Link } from "react-router-dom";
@@ -8,37 +8,47 @@ import HamburgerMenu from "./HamburgerMenu";
 
 import { FaLinkedinIn, FaVimeo, FaVimeoV } from "react-icons/fa";
 
-let iframe = <iframe></iframe>;
-
 const Home = () => {
+  const [showImg, setShowImg] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setShowImg(true);
+    }, 3000);
+  }, []);
+
+  console.log(showImg);
   return (
     <>
       <HamburgerMenu />
       <>
         <section className="showcase">
-          <div className="video_wrapper">
-            {iframe.src ? (
-              <iframe
-                className="video_players"
-                src="https://player.vimeo.com/video/558792794?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479?title=0&byline=0&portrait=0&autoplay=1&background=1&mute=0"
-                frameborder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen
-                style={{
-                  position: "absolute",
-                  top: "0",
-                  left: "0",
-                  margin: "0",
-                  width: "100%",
-                  height: "100vh",
-                }}
-                title="Autonomist Homepage Loop"
-              ></iframe>
-            ) : (
-              <img src={still} alt="dancing" />
-            )}
-          </div>
+          <div className="embed-container">
+            <iframe
+              className="video_players"
+              src="https://player.vimeo.com/video/562032745?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479?title=0&byline=0&portrait=0&autoplay=1&background=1&mute=0"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+              style={{
+                position: "absolute",
+                top: "-89px",
+                left: "0",
+                margin: "0",
+                width: "100%",
+                height: "120vh",
+              }}
+              title="Autonomist Homepage Loop"
+            ></iframe>
 
+            <img
+              src={still}
+              alt="dancing"
+              className={
+                showImg === false ? "starting_img" : "starting_img_none"
+              }
+            />
+            <img src={still} alt="dancing" className="mobile_img" />
+          </div>
           <header>
             <h2 className="brand_logo">Autonomist Films</h2>
             {/* <div className="toggle">menu</div> */}
