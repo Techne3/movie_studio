@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import still from "../images/mainHome.jpg";
+import still from "../images/fallBack.jpg";
 import { Link } from "react-router-dom";
 
 import "../styles/home.scss";

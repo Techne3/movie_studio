@@ -47,7 +47,7 @@ const Contact = () => {
       <HamburgerMenu />
       <div className="contact_wrapper">
         <div className="logo_contact">
-          <p>Contact</p>
+          <p>CONTACT</p>
           <h1>Autonomist Films</h1>
         </div>
         <div className="contact_info_container">

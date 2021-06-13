@@ -7,7 +7,7 @@
 }
 .logo_contact p {
   color: #d1cfcf;
-  margin: 1rem;
+  margin: 1.4rem;
   font-size: 1.4em;
 }
 .logo_contact h1 {
@@ -42,6 +42,11 @@
   flex-direction: column;
   margin: 4rem 6rem;
   color: #d1cfcf;
+}
+.topImg {
+  @media screen and (max-width: 900px) {
+    width: 200% !important;
+  }
 }
 
 .contact_info {
