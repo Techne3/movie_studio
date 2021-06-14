@@ -111,17 +111,17 @@ const Directors = () => {
               {" "}
               {activeItem === "daniel" ? (
                 <>
-                  <p className="dir_title">DANIEL SHARKEY </p>
+                  <h4 className="dir_title">DANIEL SHARKEY </h4>
                   <p>Cinematographer • Director • Editor </p>
                 </>
               ) : activeItem === "maitland" ? (
                 <>
-                  <p className="dir_title">MAITLAND LOTTIMER </p>
+                  <h4 className="dir_title">MAITLAND LOTTIMER </h4>
                   <p>Director • Editor • Composer </p>
                 </>
               ) : (
                 <>
-                  <p className="dir_title">SARAH MEGYSEY </p>
+                  <h4 className="dir_title">SARAH MEGYSEY </h4>
                   <p>Cinematographer • Director • Editor </p>
                 </>
               )}
@@ -232,7 +232,7 @@ const Directors = () => {
               ))}
         </div>
 
-        <div className="bio_container">
+        {/* <div className="bio_container">
           <h3>
             About{" "}
             {activeItem === "daniel"
@@ -250,7 +250,7 @@ const Directors = () => {
               <AboutDaniel />
             )}
           </div>
-        </div>
+        </div> */}
 
         <>
           {isModalOpened && (

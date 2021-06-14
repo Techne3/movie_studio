@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  // background-color: #eff1f4;
+  margin-bottom: 2rem;
   background-color: #fff;
 
   @media screen and (max-width: 760px) {
@@ -200,11 +200,11 @@
 }
 
 .logos:hover {
-  color: #ff331a;
+  color: #dbbc1d;
 }
 
 #logo:hover {
-  color: #ff331a;
+  color: #dbbc1d;
 }
 #logo {
   letter-spacing: 2px;
@@ -225,11 +225,14 @@
   margin-left: 0.4rem;
 }
 .dir_title {
-  color: #ff331a;
+  color: #000;
+  font-weight: 500;
   font-size: 1.2em;
 }
-
-.credit_wrapper {
+.dir_name p {
+  color: #948989;
+}
+.dir_title .credit_wrapper {
   // width: 80%;
   margin: 3rem;
   font-size: 0.8rem;

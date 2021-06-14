@@ -9,14 +9,32 @@
   color: #d1cfcf;
   margin: 1.4rem;
   font-size: 1.4em;
+  @media screen and (max-width: 760px) {
+    position: absolute;
+    left: 14px;
+  }
+}
+.links_logo {
+  text-decoration: none;
 }
 .logo_contact h1 {
-  color: #d1cfcf;
+  color: #fff;
   margin: 1rem;
-  font-size: 2.3em;
+  font-size: 1.8rem;
   font-family: "Bebas Neue", cursive;
   letter-spacing: 2px;
-  font-weight: 400;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s;
+  @media screen and (max-width: 760px) {
+    position: absolute;
+    top: 0.09rem;
+    left: 20px;
+    font-size: 1.8rem;
+  }
+  &:hover {
+    color: #dbbc1d;
+  }
 }
 .data h4 {
   line-height: 1.5em;
@@ -25,27 +43,35 @@
 }
 .data p {
   line-height: 1.5em;
-  font-weight: 200;
+  // font-weight: 200;
+  font-size: 1.4rem;
+}
+
+.contact_data {
+  margin-top: 5rem;
 }
 
 .contact_wrapper {
   min-height: 100vh;
   background: #815c33;
+  overflow: hidden;
 }
 .contact_info_container {
   display: flex;
   width: 100%;
 }
 .contact_info {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
-  margin: 4rem 6rem;
+  margin: 6rem 3rem;
   color: #d1cfcf;
 }
 .topImg {
+  overflow: hidden;
   @media screen and (max-width: 900px) {
     width: 200% !important;
+    overflow: hidden;
   }
 }
 

@@ -84,7 +84,7 @@ const HamburgerMenu = () => {
               <NavLink
                 to="/contact"
                 className="menu__link"
-                activeStyle={{ color: "#ff331a" }}
+                activeStyle={{ color: "#dbbc1d" }}
                 onClick={() => handleItemClick()}
               >
                 CONTACT
@@ -94,7 +94,7 @@ const HamburgerMenu = () => {
               <NavLink
                 to="/directors"
                 className="menu__link"
-                activeStyle={{ color: "#ff331a" }}
+                activeStyle={{ color: "#dbbc1d" }}
                 onClick={() => handleItemClick()}
               >
                 FILMMAKERS

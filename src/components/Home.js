@@ -13,7 +13,7 @@ const Home = () => {
   useEffect(() => {
     setTimeout(() => {
       setShowImg(true);
-    }, 3000);
+    }, 2000);
   }, []);
 
   console.log(showImg);
@@ -57,11 +57,7 @@ const Home = () => {
           <div className="overlay"></div>
           <div className="text">
             <h2 className="brand">Autonomist Films</h2>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error a
-              ratione quod cupiditate aperiam ea mollitia animi ad reiciendis!
-              Iure.
-            </p>
+            <p>Video Production Company</p>
 
             <Link to="/directors">
               <button className="btn_home">Filmmakers</button>

@@ -48,16 +48,25 @@ const Contact = () => {
       <div className="contact_wrapper">
         <div className="logo_contact">
           <p>CONTACT</p>
-          <h1>Autonomist Films</h1>
+          <Link to="/" className="links_logo">
+            <h1>Autonomist Films</h1>
+          </Link>
         </div>
         <div className="contact_info_container">
           <div className="contact_info">
-            <h1>Autonomist Films Team</h1>
+            {/* <h1>Autonomist Films Team</h1> */}
             <div className="data">
-              <h4>Contact Us</h4>
-              <p>Lorem ipsum dolor sit amet.</p>
-              <p>Lorem ipsum dolor sit amet.</p>
-              <p>Lorem ipsum dolor sit amet.</p>
+              <p>
+                Autonomist Films is a video production company composed of an
+                expanding group of filmmakers. Based in Denver, Colorado.
+              </p>
+              <div className="contact_data">
+                <h3>Contact Us</h3>
+                <p>720-555-0000</p>
+              </div>
+
+              {/* <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor sit amet.</p> */}
             </div>
           </div>
         </div>

@@ -13,7 +13,7 @@
   --toggler-offset-right: 1.7rem;
   --toggler-offset-top: 50%;
   --toggler-color: #4e4d4d;
-  --toggler-color-hover: #ff331a;
+  --toggler-color-hover: #dbbc1d;
 }
 
 // same as var(--toggler-line-number)
@@ -133,7 +133,7 @@ $total: 3;
   &:hover,
   &:focus,
   &:active {
-    color: #ff331a;
+    color: #dbbc1d;
   }
 
   @media screen and (max-width: 760px) {
@@ -156,7 +156,7 @@ $total: 3;
   &:hover,
   &:focus,
   &:active {
-    color: #ff331a;
+    color: #dbbc1d;
   }
 
   @media screen and (max-width: 760px) {

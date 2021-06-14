@@ -11,17 +11,17 @@ import "../styles/filmmakers.scss";
 const obj_film = {
   info: [
     {
-      names: "Maitland Lottimer",
+      names: "MAITLAND LOTTIMER",
       links: "/maitland",
       img: `${maitlandCover}`,
     },
     {
-      names: "Sarah Megysey",
+      names: "SARAH MEGYSEY",
       links: "/sarah",
       img: `${sarahCover}`,
     },
     {
-      names: "Daniel Sharkey",
+      names: "DANIEL SHARKEY",
       links: "/daniel",
       img: `${danCover}`,
     },

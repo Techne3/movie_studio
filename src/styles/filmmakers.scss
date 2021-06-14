@@ -3,7 +3,7 @@
   //   top: 50%;
   //   left: 45%;
   //   transform: translate(-50%, -50%);
-  margin: 10rem 0;
+  margin: 5rem 0 3rem 0;
   width: 95%;
   display: flex;
   //   height: 50vh;
@@ -20,6 +20,13 @@
     width: 98%;
   }
 }
+.logos {
+  position: absolute;
+  top: 1em;
+  @media screen and (max-width: 760px) {
+    top: 0.5em;
+  }
+}
 
 // style={{
 //   fontSize: "1.3rem",
@@ -30,7 +37,7 @@
 // }}
 .filmmakers_title {
   font-size: 1.5rem;
-  color: rgb(148, 137, 137);
+  color: #948989;
   letter-spacing: 1px;
   font-weight: 400;
   position: absolute;
@@ -38,9 +45,10 @@
   top: 2.1rem;
   @media screen and (max-width: 760px) {
     position: absolute;
-    top: 3.6rem;
-    left: 3rem;
+    top: 3rem;
+    left: 1.2rem;
     margin-bottom: 5rem;
+    font-size: 1.2em;
   }
 }
 
@@ -92,8 +100,12 @@
 .links {
   text-decoration: none !important;
   color: #fff;
-  font-size: 2em;
+  font-size: 1.8em;
+  font-weight: 400;
   width: 100%;
+  @media screen and (max-width: 760px) {
+    font-size: 1.4em;
+  }
 }
 .filmmakers_container {
   width: 100%;
@@ -107,7 +119,7 @@
   width: 100%;
   transition: 0.5s ease;
   background-color: #0000004d;
-  color: rgb(219, 188, 29);
+  color: #dbbc1d;
   display: flex;
   justify-content: center;
   align-items: center;
