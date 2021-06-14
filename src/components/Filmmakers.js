@@ -3,7 +3,7 @@ import HamburgerMenu from "./HamburgerMenu";
 
 import { Link } from "react-router-dom";
 
-import sarahCover from "../images/sarah/SarahCover.jpg";
+import sarahCover from "../images/sarah/SARAH.jpg";
 import maitlandCover from "../images/maitland/MaitlandCover.jpg";
 import danCover from "../images/dan/DanCover.jpg";
 

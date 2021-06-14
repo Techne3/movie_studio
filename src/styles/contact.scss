@@ -50,6 +50,22 @@
 .contact_data {
   margin-top: 5rem;
 }
+.contact_data h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  text-decoration: uppercase;
+}
+.contact_data a {
+  text-decoration: none;
+  color: #d1cfcf;
+  font-size: 1.5rem;
+  font-weight: 300;
+
+  &:hover {
+    color: #dbbc1d;
+    // color: red;
+  }
+}
 
 .contact_wrapper {
   min-height: 100vh;

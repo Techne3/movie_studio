@@ -1,5 +1,5 @@
 import Butterflies from "../images/sarah/Butterfly3.jpg";
-import Drylands from "../images/sarah/DryLand2.jpg";
+import Drylands from "../images/sarah/dry.jpg";
 import Farm from "../images/sarah/Farm.jpg";
 import MoonRocks from "../images/sarah/MoonRock.jpg";
 import YourLife from "../images/sarah/YourLife.jpg";

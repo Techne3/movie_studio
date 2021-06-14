@@ -62,7 +62,13 @@ const Contact = () => {
               </p>
               <div className="contact_data">
                 <h3>Contact Us</h3>
-                <p>720-555-0000</p>
+                <a href="tel:6175288707">617-528-8707</a>
+                <p>
+                  {" "}
+                  <a href="mailto:info@autonomistfilms.com">
+                    info@autonomistfilms.com
+                  </a>
+                </p>
               </div>
 
               {/* <p>Lorem ipsum dolor sit amet.</p>

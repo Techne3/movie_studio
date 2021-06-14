@@ -1,11 +1,11 @@
 import Ocat from "../images/maitland/Octa.jpg";
 import MakingOf from "../images/maitland/MakingOf50.jpg";
-import Run from "../images/maitland/Run.jpg";
+import Run from "../images/maitland/Nash.jpg";
 import Nathan from "../images/maitland/Nathan.jpg";
 import TheHouse from "../images/maitland/TheHouse.jpg";
-import Gildeds from "../images/maitland/Gildeds.jpg";
+import Gildeds from "../images/maitland/Gilded1.jpg";
 import ModernMaps from "../images/maitland/ModernMaps.jpg";
-import Magic from "../images/maitland/Magic.jpg";
+import Magic from "../images/maitland/MAINTIMELINE.jpg";
 import DonThurl from "../images/maitland/DonThurl.jpg";
 
 const maitland = {
