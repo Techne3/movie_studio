@@ -16,7 +16,7 @@ const obj_film = {
       img: `${maitlandCover}`,
     },
     {
-      names: "SARAH MEGYSEY",
+      names: "SARAH MEGYESY",
       links: "/sarah",
       img: `${sarahCover}`,
     },

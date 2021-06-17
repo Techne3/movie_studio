@@ -121,7 +121,7 @@ const Directors = () => {
                 </>
               ) : (
                 <>
-                  <h4 className="dir_title">SARAH MEGYSEY </h4>
+                  <h4 className="dir_title">SARAH MEGYESY </h4>
                   <p>Cinematographer • Director • Editor </p>
                 </>
               )}
