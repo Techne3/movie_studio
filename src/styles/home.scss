@@ -40,16 +40,21 @@
   overflow: hidden;
 }
 .video_players {
-  @media screen and (max-width: 900px) {
-    visibility: hidden;
+  @media screen and (max-width: 1020px) {
+    // visibility: hidden;
     // height: 300vh;
-    // padding-bottom: 0;
-    // position: absolute;
-    // width: 300% !important;
-    // height: 100vh;
-    // overflow: hidden;
+    padding-bottom: 0;
+    position: absolute;
+    width: 180vh !important;
+    height: 100vh;
+    overflow: hidden;
     // top: -300px;
+    left: -1000px;
+    z-index: 3;
   }
+  // @media screen and (max-width: 1000px) {
+  //   visibility: hidden;
+  // }
 }
 .embed-container {
   @media screen and (max-width: 900px) {
