@@ -10,11 +10,13 @@ import Home from "./components/Home";
 import CarouselComp from "./components/CarouselComp";
 import Contacts from "./components/Contacts";
 import Filmmakers from "./components/Filmmakers";
+import ScrollToTop from "./components/ScrollTop";
 
 function App() {
   return (
     <Router>
       <div className="App">
+        <ScrollToTop />
         <Route exact path="/" component={Home}></Route>
         <Route exact path="/directors" component={Filmmakers}></Route>
         {/* <Route path="/contact" component={Contacts}></Route> */}
@@ -24,6 +26,7 @@ function App() {
         <Route path="/sarah" component={Directors}></Route>
         <Route path="/contact" component={Contact}></Route>
         <Route path="/about" component={About}></Route>
+        <ScrollToTop />
         {/* <Route path="/directors" component={CarouselComp}></Route> */}
       </div>
     </Router>
