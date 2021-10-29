@@ -8,7 +8,7 @@ const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
-    if (window.pageYOffset > 300) {
+    if (window.pageYOffset > 100) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
@@ -29,16 +29,16 @@ const ScrollToTop = () => {
   }, []);
 
   return (
-    <div className='fixed bottom-2 right-2'>
+    <div className='fixed bottom-4 right-4'>
       <button
         type='button'
         onClick={scrollToTop}
         className={classNames(
           isVisible ? 'opacity-100' : 'opacity-0',
-          'inline-flex items-center p3 rounded-full shadow-sm text-white bg-pink-600 transition-opacity hover:bg-pink-600 hover:bg-pink-700 focus:outline-none focus:ring-2 focus: ring-offset-2 focus:ring-pink-500 '
+          'inline-flex items-center p3 rounded-full shadow-sm text-white bg-yellow-500 transition-opacity hover:bg-pink-600 hover:bg-pink-700 focus:outline-none focus:ring-2 focus: ring-offset-2 focus:ring-pink-500 '
         )}
       >
-        <BiArrowFromBottom className='w-6 h-6' aria-hidden='true' />
+        <BiArrowFromBottom className='w-8 h-8' aria-hidden='true' />
       </button>
     </div>
   );

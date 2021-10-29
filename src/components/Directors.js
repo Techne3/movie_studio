@@ -1,33 +1,35 @@
-import React, { useState, useEffect } from "react";
-import "../styles/directorInfo.scss";
-import "../styles/modal.scss";
+import React, { useState, useEffect } from 'react';
+import '../styles/directorInfo.scss';
+import '../styles/modal.scss';
 
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
-import HamburgerMenu from "./HamburgerMenu";
-import Modal from "./Modal";
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import HamburgerMenu from './HamburgerMenu';
+import Modal from './Modal';
 
-import ReactDOM from "react-dom";
-import ModalVideo from "react-modal-video";
+import ReactDOM from 'react-dom';
+import ModalVideo from 'react-modal-video';
 
-import dan from "../data/dataDan";
-import maitland from "../data/dataMaitland";
-import sarah from "../data/dataSarah";
-import AboutSarah from "./AboutSarah";
-import AboutMaitland from "./AboutMaitland";
-import AboutDaniel from "./AboutDaniel";
+import dan from '../data/dataDan';
+import maitland from '../data/dataMaitland';
+import sarah from '../data/dataSarah';
+import AboutSarah from './AboutSarah';
+import AboutMaitland from './AboutMaitland';
+import AboutDaniel from './AboutDaniel';
+
+import ScrollToTop from './ScrollToTop';
 
 const Directors = () => {
   const [isOpen, setOpen] = useState(false);
-  const [producer, setProducer] = useState("");
-  const [director, setDirector] = useState("");
-  const [written, setWritten] = useState("");
-  const [cinematography, setCinematography] = useState("");
-  const [edited, setEdited] = useState("");
-  const [staring, setStaring] = useState("");
-  const [music, setMusic] = useState("");
-  const [audio, setAudio] = useState("");
-  const [animation, setAnimation] = useState("");
-  const [other, setOther] = useState("");
+  const [producer, setProducer] = useState('');
+  const [director, setDirector] = useState('');
+  const [written, setWritten] = useState('');
+  const [cinematography, setCinematography] = useState('');
+  const [edited, setEdited] = useState('');
+  const [staring, setStaring] = useState('');
+  const [music, setMusic] = useState('');
+  const [audio, setAudio] = useState('');
+  const [animation, setAnimation] = useState('');
+  const [other, setOther] = useState('');
 
   const [videoInfo, setVideoInfo] = useState([
     {
@@ -54,16 +56,16 @@ const Directors = () => {
   );
 
   ///
-  const [header, setHeader] = useState("header");
-  const [border, setBorder] = useState("boarder_shadow");
+  const [header, setHeader] = useState('header');
+  const [border, setBorder] = useState('boarder_shadow');
 
   const listenScrollEvent = (event) => {
     if (window.scrollY < 5) {
-      setHeader("header");
-      setBorder("border_shadow");
+      setHeader('header');
+      setBorder('border_shadow');
     } else if (window.scrollY > 5) {
-      setHeader("header2");
-      setBorder("no_border_shadow");
+      setHeader('header2');
+      setBorder('no_border_shadow');
     }
   };
 
@@ -88,13 +90,13 @@ const Directors = () => {
   }, [videoInfo.credits]);
 
   useEffect(() => {
-    window.addEventListener("scroll", listenScrollEvent);
+    window.addEventListener('scroll', listenScrollEvent);
 
-    return () => window.removeEventListener("scroll", listenScrollEvent);
+    return () => window.removeEventListener('scroll', listenScrollEvent);
   }, []);
 
   const pathname = window.location.pathname;
-  const path = pathname === "/" ? "home" : pathname.substr(1);
+  const path = pathname === '/' ? 'home' : pathname.substr(1);
 
   const [activeItem, setActiveItem] = useState(path);
 
@@ -102,43 +104,43 @@ const Directors = () => {
 
   return (
     <>
-      <div className={isOpen ? "modal" : "header_wrapper"}>
-        <div className={border} id="header_wrapper">
-          <div className="directors_name_container">
+      <div className={isOpen ? 'modal' : 'header_wrapper'}>
+        <div className={border} id='header_wrapper'>
+          <div className='directors_name_container'>
             {/* <p>Filmmaker </p> */}
 
-            <p className="dir_name">
-              {" "}
-              {activeItem === "daniel" ? (
+            <p className='dir_name'>
+              {' '}
+              {activeItem === 'daniel' ? (
                 <>
-                  <h4 className="dir_title">DANIEL SHARKEY </h4>
+                  <h4 className='dir_title'>DANIEL SHARKEY </h4>
                   <p>Cinematographer • Director • Editor </p>
                 </>
-              ) : activeItem === "maitland" ? (
+              ) : activeItem === 'maitland' ? (
                 <>
-                  <h4 className="dir_title">MAITLAND LOTTIMER </h4>
+                  <h4 className='dir_title'>MAITLAND LOTTIMER </h4>
                   <p>Director • Editor • Composer </p>
                 </>
               ) : (
                 <>
-                  <h4 className="dir_title">SARAH MEGYESY </h4>
+                  <h4 className='dir_title'>SARAH MEGYESY </h4>
                   <p>Cinematographer • Director • Editor </p>
                 </>
               )}
             </p>
           </div>
-          <Link to="/" className={header} id="logo">
+          <Link to='/' className={header} id='logo'>
             Autonomist Films
           </Link>
         </div>
         <HamburgerMenu />
         {videoInfo.video && <></>}
-        <div className="director_wrapper">
-          {activeItem === "daniel"
+        <div className='director_wrapper'>
+          {activeItem === 'daniel'
             ? dan.info.map((x) => (
                 <>
                   <div
-                    className="post"
+                    className='post'
                     onClick={() =>
                       changeVideo({
                         video: x.description,
@@ -148,30 +150,30 @@ const Directors = () => {
                     }
                     style={{
                       backgroundImage: `url(${x.image})`,
-                      backgroundRepeat: "no-repeat",
-                      backgroundPosition: "center",
-                      backgroundSize: "cover",
-                      justifyContent: "center",
-                      alignItems: "center",
+                      backgroundRepeat: 'no-repeat',
+                      backgroundPosition: 'center',
+                      backgroundSize: 'cover',
+                      justifyContent: 'center',
+                      alignItems: 'center',
                     }}
                   >
-                    <div className="video_name">
+                    <div className='video_name'>
                       <h2>{x.name}</h2>
                     </div>
 
-                    <div className="post-s">
+                    <div className='post-s'>
                       <h4>{x.director}</h4>
 
-                      <div className="post-info"></div>
+                      <div className='post-info'></div>
                     </div>
                   </div>
                 </>
               ))
-            : activeItem === "maitland"
+            : activeItem === 'maitland'
             ? maitland.info.map((x) => (
                 <>
                   <div
-                    className="post"
+                    className='post'
                     onClick={() =>
                       changeVideo({
                         video: x.description,
@@ -181,19 +183,19 @@ const Directors = () => {
                     }
                     style={{
                       backgroundImage: `url(${x.image})`,
-                      backgroundRepeat: "no-repeat",
-                      backgroundPosition: "center",
-                      backgroundSize: "cover",
-                      justifyContent: "center",
-                      alignItems: "center",
+                      backgroundRepeat: 'no-repeat',
+                      backgroundPosition: 'center',
+                      backgroundSize: 'cover',
+                      justifyContent: 'center',
+                      alignItems: 'center',
                     }}
                   >
-                    <div className="video_name">
+                    <div className='video_name'>
                       <h2>{x.name}</h2>
                     </div>
-                    <div className="post-s">
+                    <div className='post-s'>
                       <h4>{x.director}</h4>
-                      <div className="post-info"></div>
+                      <div className='post-info'></div>
                     </div>
                   </div>
                 </>
@@ -201,7 +203,7 @@ const Directors = () => {
             : sarah.info.map((x) => (
                 <>
                   <div
-                    className="post"
+                    className='post'
                     onClick={() =>
                       changeVideo({
                         video: x.description,
@@ -211,21 +213,21 @@ const Directors = () => {
                     }
                     style={{
                       backgroundImage: `url(${x.image})`,
-                      backgroundRepeat: "no-repeat",
-                      backgroundPosition: "center",
-                      backgroundSize: "cover",
-                      justifyContent: "center",
-                      alignItems: "center",
+                      backgroundRepeat: 'no-repeat',
+                      backgroundPosition: 'center',
+                      backgroundSize: 'cover',
+                      justifyContent: 'center',
+                      alignItems: 'center',
                     }}
                   >
-                    <div className="video_name">
+                    <div className='video_name'>
                       <h2>{x.name}</h2>
                     </div>
 
                     {/* <img src={x.image} alt="video" /> */}
-                    <div className="post-s">
+                    <div className='post-s'>
                       <h4>{x.director}</h4>
-                      <div className="post-info"></div>
+                      <div className='post-info'></div>
                     </div>
                   </div>
                 </>
@@ -272,20 +274,21 @@ const Directors = () => {
               other={other}
             >
               <iframe
-                title="casts"
+                title='casts'
                 src={videoInfo.video}
                 style={{
-                  width: "100%",
-                  height: "100%",
+                  width: '100%',
+                  height: '100%',
                 }}
-                frameborder="0"
-                allow="autoplay; fullscreen;"
+                frameborder='0'
+                allow='autoplay; fullscreen;'
                 allowfullscreen
               ></iframe>
             </Modal>
           )}
         </>
       </div>
+      <ScrollToTop />
     </>
   );
 };
