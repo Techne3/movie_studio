@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { BiArrowFromBottom } from 'react-icons/bi';
 import { CgArrowUpR } from 'react-icons/cg';
+import '../styles/scrollToTop.scss';
 
 import { classNames } from '../util/classNames';
 
@@ -34,9 +35,13 @@ const ScrollToTop = () => {
       <button
         type='button'
         onClick={scrollToTop}
-        className={classNames(isVisible ? 'opacity-100' : 'opacity-0')}
+        className={isVisible ? 'block' : 'hidden'}
+        // style={{ visibility: isVisible ? 'visible ' : 'hidden' }}
+        // className={classNames(
+        //   'bg-transparent hover:text-yellow-500 hover:text-white text-goldens-500 hover:border-transparent rounded'
+        // )}
       >
-        <CgArrowUpR className='w-8 h-8' aria-hidden='true' />
+        <CgArrowUpR className='w-10 h-8' aria-hidden='true' />
       </button>
     </div>
   );

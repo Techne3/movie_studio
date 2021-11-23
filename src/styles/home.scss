@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 // .title_container {
 //   z-index: 999;
@@ -101,7 +101,7 @@
 .btn_home::before {
   border-radius: 6px;
   border: 3px solid #fff;
-  content: "";
+  content: '';
   position: absolute;
   width: 250px;
   height: 75px;
@@ -243,10 +243,10 @@
   border-radius: 2%;
 }
 .brand {
-  font-family: "Bebas Neue", cursive;
+  font-family: 'Bebas Neue';
 }
 .brand_logo {
-  font-family: "Bebas Neue", cursive;
+  font-family: 'Bebas Neue';
   position: fixed;
   top: 10;
   right: 40px;
@@ -254,6 +254,7 @@
   letter-spacing: 2px;
 
   @media screen and (max-width: 760px) {
-    left: 40px;
+    // left: 40px;
+    visibility: hidden;
   }
 }
