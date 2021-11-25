@@ -16,7 +16,7 @@ const Home = () => {
     }, 4000);
   }, []);
 
-  console.log(showImg);
+  // console.log(showImg);
   return (
     <>
       <HamburgerMenu />

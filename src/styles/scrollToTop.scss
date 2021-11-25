@@ -1,8 +1,9 @@
 .block {
   color: #8ac5a9;
+  // -webkit-transition: transform 0.01s ease 0s;
+  transition: transform 0.9s ease 0 !important;
   &:hover {
-    -webkit-transition: transform 0.2s ease 0s;
-    transition: transform 0.2s ease 0;
     color: gold;
+    transition: all 0.3s ease;
   }
 }

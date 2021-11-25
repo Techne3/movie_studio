@@ -64,8 +64,8 @@
 
 .starting_img {
   z-index: -1;
-  @media screen and (min-width: 900px) {
-    // visibility: hidden;
+  @media screen and (min-width: 700px) {
+    // width: 180vh !important;
     z-index: -1;
   }
 }
